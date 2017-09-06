@@ -1,0 +1,16 @@
+[paths]
+source =
+   src/mfs
+   */site-packages/mfs
+
+[run]
+branch = true
+source =
+    mfs
+    tests
+parallel = true
+
+[report]
+show_missing = true
+precision = 2
+omit = *migrations*
