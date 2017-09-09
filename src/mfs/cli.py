@@ -20,47 +20,20 @@ Options:
 
 import os
 import sys
+
 from docopt import docopt
 
 import mfs.scrape as scrape
 
-# Module that contains the command line app.
-#
-# Why does this file exist, and why not put this in __main__?
-#
-#   You might be tempted to import things from __main__ later, but that will cause
-#   problems: the code will get executed twice:
-#
-#   - When you run `python -mmfs` python will execute
-#     ``__main__.py`` as a script. That means there won't be any
-#     ``mfs.__main__`` in ``sys.modules``.
-#   - When you import __main__ it will get executed again (as a module) because
-#     there's no ``mfs.__main__`` in ``sys.modules``.
-#
-#   Also see (1) from http://click.pocoo.org/5/setuptools/#setuptools-integration
-
-
-
-
 
 def main(argv=sys.argv):
-    """
-    Args:
-        argv (list): List of arguments
-
-    Returns:
-        int: A return code
-
-    Does stuff.
-    """
-
     args = docopt(__doc__, argv=None, help=True, version=None, options_first=False)
 
     dest = args['--destination'] or os.getcwd()
     if not os.path.isdir(dest):
         raise ValueError("{} is not a directory".format(dest))
     url = args['URL']
-    print(url)
+    print('Processing {}'.format(url))
 
     # karopka model overview ?
     # m = re.match('^http://karopka.ru/community/user/(.*)/\?MODEL=(.*)$', url)

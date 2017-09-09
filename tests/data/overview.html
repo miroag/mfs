@@ -1,0 +1,882 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<link href="/bitrix/js/main/core/css/core.css?15011256853963" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/main/core/css/core_popup.css?150112689220224" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/main/core/css/core_date.css?150112637710263" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/im/css/common.css?150112692745143" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/im/css/phone_call_view.css?150112692846207" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/im/css/im.css?1501126928205996" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/panel/main/popup.css?150112582223084" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/components/bitrix/photogallery/templates/.default/style.css?150122043031669" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/.default/components/bitrix/socialnetwork/network_v2/style.css?128950920017585" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/components/karopka/model.comments/templates/.default/style.css?14249844002841" type="text/css"  rel="stylesheet" />
+<link href="/assets/css/fotorama.css?142859024415141" type="text/css"  rel="stylesheet" />
+<link href="/assets/css/likely.css?15006286928998" type="text/css"  rel="stylesheet" />
+<link href="/gfx/style_v2.css?150381027720135" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/gfx/sb/sb.css?12799152002047" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/templates/v2/styles.css?1501225264261" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'WEEK_START':'1'});(window.BX||top.BX).message({'MONTH_1':'Январь','MONTH_2':'Февраль','MONTH_3':'Март','MONTH_4':'Апрель','MONTH_5':'Май','MONTH_6':'Июнь','MONTH_7':'Июль','MONTH_8':'Август','MONTH_9':'Сентябрь','MONTH_10':'Октябрь','MONTH_11':'Ноябрь','MONTH_12':'Декабрь','MONTH_1_S':'Января','MONTH_2_S':'Февраля','MONTH_3_S':'Марта','MONTH_4_S':'Апреля','MONTH_5_S':'Мая','MONTH_6_S':'Июня','MONTH_7_S':'Июля','MONTH_8_S':'Августа','MONTH_9_S':'Сентября','MONTH_10_S':'Октября','MONTH_11_S':'Ноября','MONTH_12_S':'Декабря','MON_1':'Янв','MON_2':'Фев','MON_3':'Мар','MON_4':'Апр','MON_5':'Май','MON_6':'Июн','MON_7':'Июл','MON_8':'Авг','MON_9':'Сен','MON_10':'Окт','MON_11':'Ноя','MON_12':'Дек','DAY_OF_WEEK_0':'Воскресенье','DAY_OF_WEEK_1':'Понедельник','DAY_OF_WEEK_2':'Вторник','DAY_OF_WEEK_3':'Среда','DAY_OF_WEEK_4':'Четверг','DAY_OF_WEEK_5':'Пятница','DAY_OF_WEEK_6':'Суббота','DOW_0':'Вс','DOW_1':'Пн','DOW_2':'Вт','DOW_3':'Ср','DOW_4':'Чт','DOW_5':'Пт','DOW_6':'Сб','FD_SECOND_AGO_0':'#VALUE# секунд назад','FD_SECOND_AGO_1':'#VALUE# секунду назад','FD_SECOND_AGO_10_20':'#VALUE# секунд назад','FD_SECOND_AGO_MOD_1':'#VALUE# секунду назад','FD_SECOND_AGO_MOD_2_4':'#VALUE# секунды назад','FD_SECOND_AGO_MOD_OTHER':'#VALUE# секунд назад','FD_SECOND_DIFF_0':'#VALUE# секунд','FD_SECOND_DIFF_1':'#VALUE# секунда','FD_SECOND_DIFF_10_20':'#VALUE# секунд','FD_SECOND_DIFF_MOD_1':'#VALUE# секунда','FD_SECOND_DIFF_MOD_2_4':'#VALUE# секунды','FD_SECOND_DIFF_MOD_OTHER':'#VALUE# секунд','FD_MINUTE_AGO_0':'#VALUE# минут назад','FD_MINUTE_AGO_1':'#VALUE# минуту назад','FD_MINUTE_AGO_10_20':'#VALUE# минут назад','FD_MINUTE_AGO_MOD_1':'#VALUE# минуту назад','FD_MINUTE_AGO_MOD_2_4':'#VALUE# минуты назад','FD_MINUTE_AGO_MOD_OTHER':'#VALUE# минут назад','FD_MINUTE_DIFF_0':'#VALUE# минут','FD_MINUTE_DIFF_1':'#VALUE# минута','FD_MINUTE_DIFF_10_20':'#VALUE# минут','FD_MINUTE_DIFF_MOD_1':'#VALUE# минута','FD_MINUTE_DIFF_MOD_2_4':'#VALUE# минуты','FD_MINUTE_DIFF_MOD_OTHER':'#VALUE# минут','FD_MINUTE_0':'#VALUE# минут','FD_MINUTE_1':'#VALUE# минуту','FD_MINUTE_10_20':'#VALUE# минут','FD_MINUTE_MOD_1':'#VALUE# минуту','FD_MINUTE_MOD_2_4':'#VALUE# минуты','FD_MINUTE_MOD_OTHER':'#VALUE# минут','FD_HOUR_AGO_0':'#VALUE# часов назад','FD_HOUR_AGO_1':'#VALUE# час назад','FD_HOUR_AGO_10_20':'#VALUE# часов назад','FD_HOUR_AGO_MOD_1':'#VALUE# час назад','FD_HOUR_AGO_MOD_2_4':'#VALUE# часа назад','FD_HOUR_AGO_MOD_OTHER':'#VALUE# часов назад','FD_HOUR_DIFF_0':'#VALUE# часов','FD_HOUR_DIFF_1':'#VALUE# час','FD_HOUR_DIFF_10_20':'#VALUE# часов','FD_HOUR_DIFF_MOD_1':'#VALUE# час','FD_HOUR_DIFF_MOD_2_4':'#VALUE# часа','FD_HOUR_DIFF_MOD_OTHER':'#VALUE# часов','FD_YESTERDAY':'вчера','FD_TODAY':'сегодня','FD_TOMORROW':'завтра','FD_DAY_AGO_0':'#VALUE# суток назад','FD_DAY_AGO_1':'#VALUE# сутки назад','FD_DAY_AGO_10_20':'#VALUE# суток назад','FD_DAY_AGO_MOD_1':'#VALUE# сутки назад','FD_DAY_AGO_MOD_2_4':'#VALUE# суток назад','FD_DAY_AGO_MOD_OTHER':'#VALUE# суток назад','FD_DAY_DIFF_0':'#VALUE# дней','FD_DAY_DIFF_1':'#VALUE# день','FD_DAY_DIFF_10_20':'#VALUE# дней','FD_DAY_DIFF_MOD_1':'#VALUE# день','FD_DAY_DIFF_MOD_2_4':'#VALUE# дня','FD_DAY_DIFF_MOD_OTHER':'#VALUE# дней','FD_DAY_AT_TIME':'#DAY# в #TIME#','FD_MONTH_AGO_0':'#VALUE# месяцев назад','FD_MONTH_AGO_1':'#VALUE# месяц назад','FD_MONTH_AGO_10_20':'#VALUE# месяцев назад','FD_MONTH_AGO_MOD_1':'#VALUE# месяц назад','FD_MONTH_AGO_MOD_2_4':'#VALUE# месяца назад','FD_MONTH_AGO_MOD_OTHER':'#VALUE# месяцев назад','FD_MONTH_DIFF_0':'#VALUE# месяцев','FD_MONTH_DIFF_1':'#VALUE# месяц','FD_MONTH_DIFF_10_20':'#VALUE# месяцев','FD_MONTH_DIFF_MOD_1':'#VALUE# месяц','FD_MONTH_DIFF_MOD_2_4':'#VALUE# месяца','FD_MONTH_DIFF_MOD_OTHER':'#VALUE# месяцев','FD_YEARS_AGO_0':'#VALUE# лет назад','FD_YEARS_AGO_1':'#VALUE# год назад','FD_YEARS_AGO_10_20':'#VALUE# лет назад','FD_YEARS_AGO_MOD_1':'#VALUE# год назад','FD_YEARS_AGO_MOD_2_4':'#VALUE# года назад','FD_YEARS_AGO_MOD_OTHER':'#VALUE# лет назад','FD_YEARS_DIFF_0':'#VALUE# лет','FD_YEARS_DIFF_1':'#VALUE# год','FD_YEARS_DIFF_10_20':'#VALUE# лет','FD_YEARS_DIFF_MOD_1':'#VALUE# год','FD_YEARS_DIFF_MOD_2_4':'#VALUE# года','FD_YEARS_DIFF_MOD_OTHER':'#VALUE# лет','CAL_BUTTON':'Выбрать','CAL_TIME_SET':'Установить время','CAL_TIME':'Время'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'IM_YOU':'это вы','IM_M_ICON':'иконка','IM_M_QUOTE_BLOCK':'Цитата','IM_M_LOAD_USER':'Загрузка информации','IM_STATUS_ONLINE':'Онлайн','IM_STATUS_BOT':'Чат-бот','IM_STATUS_NETWORK':'Битрикс24.Network','IM_STATUS_OFFLINE':'Не в сети','IM_STATUS_AWAY':'Отсутствую','IM_STATUS_AWAY_TITLE':'Отсутствует #TIME#','IM_STATUS_DND':'Не беспокоить','IM_STATUS_MOBILE':'Мобильное приложение','IM_STATUS_NA':'Не доступен','IM_STATUS_GUEST':'Не доступен','IM_STATUS_LINES-ONLINE':'Пользователь Открытых линий','IM_M_BIRTHDAY_MESSAGE_SHORT':'Празднует сегодня день рождения!','IM_C_EMPTY':'Нет участников','IM_CL_LOAD':'Загрузка...','IM_P_TRANSFER':'Переадресовать','IM_P_MENU':'Открыть меню действия','IM_P_HOLD':'Удержать','IM_M_CL_SEARCH':'Поиск...','IM_SEARCH_B24':'Поиск в Битрикс24.Network','IM_SEARCH_SITE':'Поиск на сайте','IM_CL_RESENT_FORMAT_DATE':'D, j F','IM_M_MESSAGE_TITLE_FORMAT_DATE':'l, j F Y','IM_M_MESSAGE_FORMAT_TIME':'H:i','IM_F_FILE':'Файл','IM_F_ATTACH':'Вложение','IM_F_RATING':'Рейтинг','IM_M_CTL_EMPTY':'- Нет чатов -','IM_M_CL_EMPTY':'Нет контактов','IM_M_OL_EMPTY':'Нет открытых диалогов','IM_RESENT_NEVER':'никогда','IM_CL_USER':'Пользователь','IM_CL_CHAT':'Групповой чат','IM_CL_CHAT_2':'Закрытый чат','IM_CL_OPEN_CHAT':'Открытый чат','IM_CL_PRIVATE_CHAT':'Чат один на один','IM_CL_OL_QUEUE':'Очередь открытой линии','IM_CL_VI_QUEUE':'Очередь телефонии','IM_CL_STRUCTURE':'Подразделение компании','IM_CL_GROUP':'Группы','IM_CL_BOT':'Чат-бот','IM_CL_PHONE':'Телефонный звонок','IM_CL_LINES':'Открытая линия','IM_CL_USER_B24':'Сотрудник','IM_CL_USER_EXTRANET':'Внешний пользователь','IM_CL_USER_LINES':'Пользователь Открытых линий','IM_M_ST_ONLINE_M_B24':'вошел в Битрикс24','IM_M_ST_ONLINE_F_B24':'вошла в Битрикс24','IM_M_ST_ONLINE_M':'вошел в сеть','IM_M_ST_ONLINE_F':'вошла в сеть','IM_M_CL_UNREAD':'Новые сообщения','IM_M_DELIVERED':'доставка сообщения','IM_M_NOT_DELIVERED':'сообщение не доставлено','IM_M_LOAD_MESSAGE':'Загрузка сообщений...','IM_M_LOAD_ERROR':'Невозможно загрузить сообщения, проверьте параметры подключения к сети.','IM_M_NO_MESSAGE':'Нет сообщений','IM_M_NO_MESSAGE_2':'Нет сообщений за последние 30 дней','IM_M_NO_MESSAGE_LOAD':'Загрузить более ранние сообщения','IM_M_LOAD_PREVIOUS':'Загрузить предыдущие сообщения','IM_M_LOAD_NEXT':'Загрузить следующие сообщения','IM_M_NO_MESSAGE_BOT':'Вас приветствует чат-бот #BOT_NAME#.','IM_M_USER_NO_ACCESS':'Нет доступа','IM_M_WRITING':'#USER_NAME# пишет сообщение...','IM_M_WRITING_BOX':'пишет сообщение...','IM_M_RETRY':'Кликните для повторной отправки сообщения','IM_M_OPEN_EXTRA_TITLE':'Кликните для открытия меню действий или кликните удерживая #SHORTCUT# для цитирования сообщения','IM_M_MENU_APP_EXISTS':'Доступны дополнительные действия.','IM_MESSAGE_LIKE':'Нравится','IM_MESSAGE_DISLIKE':'Не нравится','IM_MESSAGE_LIKE_LIST':'Кликните для просмотра списка','IM_M_DELETED':'Это сообщение было удалено.','IM_M_READED':'Сообщение просмотрено, #DATE#','IM_M_READED_CHAT':'Сообщение просмотрено: #USERS#','IM_M_READED_CHAT_MORE':'#USER# и #LINK_START#еще #COUNT##LINK_END#','IM_F_EFP':'Если уйдёте со страницы, передача файлов прервётся!','IM_F_ERROR':'Ошибка загрузки','IM_F_DOWNLOAD':'Скачать','IM_F_DOWNLOAD_DISK':'Сохранить на Диск','IM_R_COMMENT_PLURAL_0':'комментарий','IM_R_COMMENT_PLURAL_1':'комментария','IM_R_COMMENT_PLURAL_2':'комментариев','IM_R_COMMENT_ZERO':'Нет комментариев','IM_R_DIALOG_TITLE':'Комментарии','IM_R_LOAD_COMMENT':'Загрузка комментариев...','IM_R_LOAD_ERROR':'Невозможно загрузить комментарии, проверьте параметры подключения к сети.','IM_R_NO_COMMENT':'Нет комментариев','IM_F_DELETE':'Удалить','IM_F_DELETE_CONFIRM':'Файл будет удален для всех участников обсуждения, продолжить?','IM_F_DELETE_CONFIRM_YES':'Да, удалить','IM_F_DELETE_SELF_CONFIRM':'Вы уверены что хотите удалить этот файл?','IM_F_DELETED':'Этот файл был удален.','IM_F_UPLOAD':'Идет загрузка файла','IM_F_UPLOAD_2':'Загрузка файла: #PERCENT#%','IM_F_CANCEL':'Отменить загрузку','IM_F_DND_TEXT':'Загрузить файл или картинку','IM_F_PREVIEW_WINDOW':'Просмотр файлов','IM_F_CLICK_TO_PREVIEW':'Кликните для предпросмотра','IM_F_NW20_NOT_SUPPORT':'Отправка файлов пользователю Битрикс24.Network временно не доступна','IM_F_BOT_NOT_SUPPORT':'Отправка файлов чат-боту временно не доступна','IM_N_REPLY':'Ответить','IM_N_REPLY_TEXT':'Ваш ответ успешно отправлен.','IM_M_REPLY':'Комментировать','IM_M_REPLY_TITLE':'Добавить комментарий к этому сообщению','IM_PHONE_END':'Звонок завершен','IM_PHONE_403':'Вы не можете совершить звонок','IM_PHONE_401':'Ошибка авторизации пользователя','IM_PHONE_DECLINE':'Абонент отменил вызов','IM_PHONE_UNAVAILABLE':'Абонент временно не доступен','IM_PHONE_INCOMPLETED':'Данное направление не доступно','IM_PHONE_INVITE':'Абонент ожидает на линии','IM_PHONE_INVITE_CALLBACK':'Ответьте на вызов для совершения обратного звонка','IM_PHONE_ERR_SIP_LICENSE':'Для совершения звонка с этого номера, вам необходима лицензия на модуль \"SIP-коннектор\"','IM_PHONE_ERR_NEED_RENT':'Для совершения звонка, вам необходимо арендовать номер.','IM_PHONE_ERR_BLOCK_RENT':'Номер с которого вы совершаете звонок, был заблокирован оператором.','IM_PHONE_ERR_LICENSE':'Ошибка проверки лицензии. Обратитесь в техническую поддержку.','IM_PHONE_NO_EMERGENCY':'Телефонию в Битрикс24 нельзя использовать для вызова экстренной помощи.','IM_PHONE_NO_MONEY':'У вас недостаточно средств для совершения звонка.','IM_PHONE_PAY_URL_NEW':'Пополнить счет вы можете в разделе \"Настройки телефонии\"','IM_PHONE_OUTGOING':'исходящий звонок','IM_M_CALL_ST_DECLINE':'Пользователь отменил вызов','IM_M_CALL_ST_CONNECT':'Установка соединения...','IM_M_CALL_ST_ONLINE':'Соединение установлено','IM_M_CALL_ST_INVITE':'Пользователь ожидает на линии','IM_M_CALL_ST_INVITE_2':'Пользователи ожидают на линии','IM_M_CALL_ST_WAIT':'Ожидаем ответа пользователя','IM_M_CALL_ST_WAIT_2':'Ожидаем ответа пользователей','IM_M_CALL_ST_WAIT_ACCESS_2':'Ожидаем подключения пользователя','IM_M_CALL_ST_WAIT_ACCESS_3':'Ожидаем подключения пользователей','IM_M_CALL_ST_NO_ACCESS':'Вы не можете позвонить, так как не удалось получить доступ к вебкамере или микрофону.','IM_M_CALL_ST_NO_ACCESS_HTTPS':'По требованиям безопасности, браузеры разрешают делать звонки сайтам с активным SSL сертификатом. На вашем сайте сертификат отсутствует, и звонки не могут выполнятся.','IM_M_CALL_ST_NO_ACCESS_2':'Звонок прерван: возможно у собеседника нет вебкамеры или микрофона.','IM_M_CALL_ST_NO_ACCESS_3':'Звонок прерван: не удалось получить доступ к вебкамере или микрофону.','IM_M_CALL_ST_NO_ANSWER':'Пользователь не отвечает','IM_M_CALL_ST_NO_ANSWER_2':'Пользователи не отвечают','IM_M_CALL_ST_END':'Разговор завершен','IM_M_CALL_ST_BUSY':'Звонок не состоялся: пользователь занят другим звонком.','IM_M_CALL_ST_TRANSFER':'Перенаправление звонка: ожидание ответа сотрудника','IM_M_CALL_ST_TRANSFER_1':'Перенаправление звонка: сотрудник не смог ответить на звонок','IM_AV_NEXT_VERSION':'Данная опция будет доступна в следующих версиях.','IM_PHONE_ERROR_BUSY':'Абонент занят другим звонком','IM_PHONE_ERROR_BUSY_PHONE':'Телефонный аппарат занят другим звонком','IM_M_CALL_ERR':'Невозможно установить соединение','IM_M_CALL_VOICE_FROM':'Звонок от #USER#','IM_M_CALL_VOICE_TO':'Звонок c #USER#','IM_M_CALL_BTN_RECALL':'Перезвонить','IM_M_CALL_BTN_MIC_TITLE':'Включить/выключить микрофон','IM_M_CALL_BTN_HANGUP':'Завершить','IM_M_CALL_BTN_RETURN':'Вернуться к звонку','IM_M_CALL_BTN_ANSWER':'Ответить','IM_M_CALL_BTN_CLOSE':'Закрыть','IM_M_CALL_BTN_HOLD':'Удержать','IM_M_CALL_BTN_MIC':'Микрофон','IM_M_CALL_BTN_MIC_OFF':'выключен','IM_M_CALL_BTN_MIC_ON':'включен','IM_M_CALL_BTN_TRANSFER':'Перенаправить','IM_M_CALL_BTN_NOTIFY_ADMIN':'Уведомить администратора','IM_M_CALL_BTN_NEXT':'Следующий','IM_CALL_USER_OFFLINE':'Вы не можете совершить звонок, так как пользователь не доступен.','IM_PHONE_CALL_VOICE_FROM':'Звонок от #PHONE#','IM_PHONE_CALL_TO_PHONE':'поступил на номер #PHONE#','IM_PHONE_CALL_TRANSFER':'Звонок с #PHONE# (переадресован)','IM_PHONE_CALL_VOICE_TO':'Звонок на #PHONE#','IM_PHONE_CALLBACK_TO':'Обратный звонок на #PHONE#','IM_PHONE_HIDDEN_NUMBER':'Номер скрыт','IM_PHONE_WAIT_ANSWER':'Ожидаем ответа абонента','IM_PHONE_WRONG_NUMBER':'Неверный номер телефона','IM_PHONE_WRONG_NUMBER_DESC':'Номер телефона должен быть указан в международном формате.<br/> Например: 8 (495) 111-22-33 или +74951112233','IM_PHONE_ERROR':'Ошибка при установке соединения','IM_PHONE_ERROR_CONNECT':'Ошибка соединения с сервером телефонии','IM_PHONE_NO_ANSWER':'Абонент не отвечает','IM_PHONE_BTN_ANSWER':'Ответить','IM_PHONE_BTN_BUSY':'Пропустить','IM_PHONE_GRADE':'Качество соединения:','IM_PHONE_GRADE_1':'Отсутствует','IM_PHONE_GRADE_2':'Плохое','IM_PHONE_GRADE_3':'Хорошее','IM_PHONE_GRADE_4':'Отличное','CALL_RECORD_ERROR':'Прослушать запись можно в браузере.','IM_CRM_ABOUT_CONTACT':'Контакт','IM_CRM_ABOUT_COMPANY':'Компания','IM_CRM_RESPONSIBILITY':'Ответственный','IM_CRM_BTN_DEAL':'Сделки','IM_CRM_BTN_ACTIVITY':'Дела','IM_CRM_BTN_INVOICE':'Счета','IM_CRM_BTN_CURRENT_CALL':'комментарий к звонку','IM_CRM_ACTIVITIES':'Дела','IM_CRM_DEALS':'Сделки','IM_CRM_BTN_NEW_CONTACT':'Создать новый контакт','IM_CRM_BTN_NEW_LEAD':'Создать новый лид','IM_LINK_MORE':'Подробнее','IM_ERROR_CODE':'Код','IM_PHONE_REC_ON':'Разговор будет записан','IM_PHONE_REC_NOW':'Идет запись разговора','IM_PHONE_REC_DONE':'Запись разговора сохранена','IM_PHONE_REC_OFF':'Разговор не будет записан, включить запись можно в настройках телефонии','IM_PHONE_LEAD_SAVED':'Лид сохранен, вы сможете продолжить работу с ним позже','IM_PHONE_ACTIONS':'Выберите действие','IM_PHONE_ACTION_C_DEAL':'Создать сделку','IM_PHONE_ACTION_C_INVOICE':'Создать предложение','IM_PHONE_ACTION_T_CONTACT':'Перейти в контакт','IM_PHONE_ACTION_T_LEAD':'Перейти в лид','IM_PHONE_ACTION_T_COMPANY':'Перейти в компанию','IM_PHONE_ACTION_T_DEAL':'Перейти в сделку','IM_PHONE_ACTION_C_MENU':'Создать на основании сделки','IM_PHONE_ACTION_CRM_COMMENT':'Комментарий','IM_PHONE_ACTION_CRM_DEAL':'Сделку','IM_PHONE_ACTION_CRM_INVOICE':'Счет','IM_CALL_BY_B24':'через Битрикс24','IM_CALL_BY_MOBILE':'через телефон','IM_C_CHAT_TITLE':'Введите название нового чата','IM_C_PRIVATE_TITLE':'Введите имя, фамилию, должность или отдел','IM_C_ABOUT_CHAT':'Закрытый чат виден только приглашенным пользователям. #BR##BR# В чате можно обсуждать рабочие вопросы, которые касаются конкретных людей. #BR##BR# Приглашайте в чат не только тех, кто работает в вашей компании, но и своих клиентов, партнеров, поставщиков, у которых есть Битрикс24. Чтобы добавить нового участника, укажите его фамилию, имя, e-mail или ник. #BR##BR#Настройте #PROFILE_START#свой профиль#PROFILE_END#, чтобы другие тоже смогли найти вас. ','IM_C_ABOUT_CHAT_CHAT':'Закрытый чат виден только приглашенным пользователям. #BR##BR# В чате можно обсуждать вопросы, которые касаются конкретных людей.','IM_C_ABOUT_OPEN':'Открытый чат увидят все ваши коллеги. #BR##BR# В чате можно обсуждать важные рабочие моменты, интересные всей компании. #BR##BR# Уведомление о созданном чате будет отправлено в #CHAT_START#Общий чат#CHAT_END#. Коллеги смогут посмотреть переписку чата и при желании вступить в него. #BR##BR# Ваше первое сообщение в чате очень важно, оно станет описанием для новых участников.','IM_C_ABOUT_OPEN_SITE':'Открытый чат увидят все пользователи. #BR##BR# В чате можно обсуждать интересные темы, которые могут быть интересны многим пользователям. #BR##BR# Пользователи смогут посмотреть переписку чата и при желании вступить в него. #BR##BR# Ваше первое сообщение в чате очень важно, оно станет описанием для новых участников.','IM_C_ABOUT_PRIVATE':'Чат один на один виден только вам и вашему собеседнику. #BR##BR# Найти нужного человека можно по имени, фамилии, должности или отделу. #BR##BR# Пишите не только сотрудникам, но и своим клиентам, партнерам, поставщикам, у которых есть Битрикс24. Укажите фамилию, имя, e-mail, или ник, указанные в их профиле. #BR##BR# Настройте #PROFILE_START#свой профиль#PROFILE_END#, чтобы другие смогли найти вас.','IM_C_ABOUT_PRIVATE_SITE':'Чат один на один виден только вам и вашему собеседнику. #BR##BR# Найти нужного человека можно по имени или фамилии.','IM_O_INVITE_TEXT':'Присоединитесь к коллегам, станьте участником чата','IM_O_INVITE_TEXT_SITE':'Присоединитесь к пользователям, станьте участником чата','IM_O_INVITE_JOIN':'Вступить','IM_OL_INVITE_TEXT':'Поступило новое обращение в открытую линию','IM_OL_INVITE_TEXT_OPEN':'Начните новую сессию открытой линии','IM_OL_INVITE_JOIN':'Начать','IM_OL_INVITE_ANSWER':'Ответить','IM_OL_INVITE_SKIP':'Пропустить','IM_OL_INVITE_CLOSE':'Закрыть','IM_OL_INVITE_TRANSFER':'Переадресовать','IM_OL_CHAT_STEALTH_ON':'<b>Включен режим скрытой переписки.<\/b><br>Все отправленные вами сообщения не будут видны внешнему собеседнику.','IM_OL_CHAT_STEALTH_OFF':'<b>Режим скрытой переписки выключен.<\/b><br>Все отправленные вами сообщения будут видны внешнему собеседнику.','IM_G_JOIN':'Общий чат видят все ваши коллеги. Если общение в чате становится очень активным, отключите уведомления, нажав на иконку #ICON# в панели сверху.  #LINK_START#Узнать больше об \"Общем чате\"#LINK_END#','IM_G_JOIN_LINK':'https://helpdesk.bitrix24.ru/open/1544684/','IM_G_JOIN_HELPDESK_ID':'1544684','IM_G_JOIN_M':'Я прочитал','IM_G_JOIN_F':'Я прочитала','IM_G_ACCESS':'Администратор вашего Битрикс24 ограничил доступ к отправке новых сообщений в этом чате.','IM_CL_CREATE_CHAT':'Создать закрытый чат','IM_CL_CREATE_OPEN':'Создать открытый чат','IM_CL_CREATE_PRIVATE':'Создать чат один на один','IM_CL_MORE':'еще #COUNT#','IM_CL_MORE_2':'показать #COUNT#','IM_CL_HIDE':'свернуть','IM_CL_MORE_OPEN':'Показать открытые чаты','IM_CL_MORE_CHAT':'Показать закрытые чаты','IM_CL_MORE_PRIVATE':'Показать чаты один на один','IM_CL_MORE_CALL':'Показать телефонные звонки','IM_CL_MORE_LINES':'Показать открытые линии','IM_CL_MORE_BOT':'Показать чат-ботов','IM_CL_MORE_EXTRANET':'Показать внешние чаты один на один','IM_CL_MORE_STRUCTURE':'Показать больше подразделений','IM_CL_MORE_GROUP':'Показать больше групп','IM_CL_MORE_QUEUE':'Показать все очереди','IM_CTL_CHAT_CHAT':'Закрытые чаты','IM_CTL_CHAT_OPEN':'Открытые чаты','IM_CTL_CHAT_PRIVATE':'Чаты один на один','IM_CTL_CHAT_EXTRANET':'Внешние чаты один на один','IM_CTL_CHAT_OL_QUEUE':'Очереди открытых линии','IM_CTL_CHAT_VI_QUEUE':'Очереди телефонии','IM_CTL_CHAT_OL':'Открытые линии','IM_CTL_CHAT_BOT':'Чат-боты','IM_CTL_CHAT_CALL':'Телефонные звонки','IM_CTL_CHAT_LINES':'Открытые линии','IM_CTL_CHAT_BLOCKED':'Пользователь заблокирован','IM_CTL_CHAT_STRUCTURE':'Подразделения компании','IM_CTL_CHAT_BLOCKED_LIST':'Заблокированные','IM_BLOCK_BTN_ANSWER':'Ответить','IM_BLOCK_BTN_BLOCK':'Заблокировать','IM_BLOCK_BTN_UNBLOCK':'Разблокировать','IM_BB_PUT':'Кликните для вставки сообщения в поле ввода','IM_BB_SEND':'Кликните для выполнения действия','IM_M_PAUSE':'Кликните для выполнения действия','IM_M_OL_SILENT_ON':'Включить скрытный режим','IM_M_OL_SILENT_OFF':'Выключить скрытный режим','IM_M_OL_SPAM':'Пометить как спам','IM_M_OL_FORCE_CLOSE':'Пометить как спам / <br> Принудительно завершить','IM_M_OL_PIN_ON':'Закрепить диалог','IM_M_OL_PIN_OFF':'Открепить диалог','IM_M_OL_CLOSE':'Завершить диалог','IM_M_OL_ADD_LEAD':'Сохранить в CRM','IM_M_OL_GOTO_CRM':'Перейти в CRM','IM_M_OL_GOTO_LINK':'Перейти к сообщению','IM_OL_FORMS_SOON':'Работа с CRM-формами будет доступна в ближайших обновлениях Битрикс24.','IM_OL_ANSWERS_SOON':'Работа с типовыми ответами будет доступна в ближайших обновлениях Битрикс24.','IM_OL_LIST_UNANSWERED':'Неотвеченные','IM_OL_LIST_ANSWERED':'Отвеченные','IM_OL_VOTE_LIKE':'Хорошо','IM_OL_VOTE_DISLIKE':'Плохо','IM_OL_VOTE_USER':'Оценка клиента','IM_OL_VOTE_HEAD':'Оценка руководителя','IM_OL_VOTE_WO':'без оценки','IM_OL_DIALOG_NUMBER':'Диалог №#NUMBER#','IM_MENU_TO_OL_START':'Начать новый диалог','IM_MENU_TO_TASK':'Создать задачу','IM_MENU_TO_CALEND':'Создать событие в календаре','IM_MENU_TO_POST':'Обсудить в Живой ленте','IM_OL_GUEST_NAME':'Гость','IM_M_RECENT_MORE':'Более 30 дней назад','IM_D_SEND_PUBLIC_ADMIN':'Для отправки файла пользователю вам необходимо разрешить публичные ссылки на документы в вашем Битрикс24.','IM_D_SEND_PUBLIC_ADMIN_ON':'Включить','IM_D_SEND_PUBLIC_ADMIN_READY':'Публичные ссылки на документы в вашем Битрикс24 активированы.','IM_D_SEND_PUBLIC_USER':'Для отправки файла пользователю вам необходимо разрешить публичные ссылки на документы в вашем Битрикс24. Обратитесь к администратору вашего Битрикс24 для включения этой опции.','IM_FORM_REQUIRED_FIELD':'Это поле обязательно к заполнению.','IM_FORM_SEND_DONE':'Спасибо! Форма успешно отправлена.','IM_FORM_SELECT_YES':'Да','IM_FORM_SELECT_NO':'Нет','IM_FORM_BUTTON_SEND':'Отправить','IM_FORM_BUTTON_HIDE':'Скрыть','IM_APPS_LIST':'Показать список доступных приложений','IM_UNKNOWN_ERROR':'Извините, что-то пошло не так. Повторите попытку позднее.'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'IM_PHONE_CALL_VIEW_CALL_LIST_TITLE':'Список обзвона','IM_PHONE_CALL_VIEW_WEBFORM_TITLE':'Форма','IM_PHONE_CALL_VIEW_CALL_LIST_DEFER_15_MIN':'Отложить на 15 минут','IM_PHONE_CALL_VIEW_CALL_LIST_DEFER_HOUR':'Отложить на час','IM_PHONE_CALL_VIEW_CALL_LIST_TO_END':'В конец списка','IM_PHONE_CALL_VIEW_FOLDED_CALL_LIST_TO_NUMBER':'Звонок на номер','IM_PHONE_CALL_VIEW_FOLDED_BUTTON_CALL':'Позвонить','IM_PHONE_CALL_VIEW_FOLDED_BUTTON_NEXT':'Следующий','IM_PHONE_CALL_LIST_MORE':'ешё #COUNT#','IM_PHONE_CALL_VIEW_NUMBER_UNKNOWN':'Номер не указан','IM_PHONE_CALL_VIEW_MORE':'Еще','IM_PHONE_CALL_VIEW_RATE_QUALITY':'Оцените качество связи','IM_PHONE_CALL_VIEW_DONT_LEAVE':'Если вы уйдете с этой страницы, звонок прервется','IM_PHONE_CALL_VIEW_FOLD':'Свернуть','IM_PHONE_CALL_VIEW_UNFOLD':'Развернуть'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'phpMaxFileUploads':'100','phpPostMaxSize':'1073741824','phpUploadMaxFilesize':'1073741824','bxImageExtensions':'jpg,bmp,jpeg,jpe,gif,png','bxUploaderLog':'N'});(window.BX||top.BX).message({'UPLOADER_INPUT_IS_NOT_DEFINED':'Не указано поле ввода.','UPLOADER_ACTION_URL_NOT_DEFINED':'Не указан путь для загрузки файлов.','FILE_BAD_SIZE':'Превышен максимальный размер загружаемого файла','FILE_SIZE_b':'Б','FILE_SIZE_Kb':'КБ','FILE_SIZE_Mb':'МБ','FILE_SIZE_Gb':'ГБ','FILE_SIZE_Tb':'ТБ','UPLOADER_UPLOADING_ERROR':'Ошибка загрузки.','UPLOADER_UPLOADING_ERROR1':'Некорректный ответ сервера.','UPLOADER_UPLOADING_ERROR2':'Количество файлов указанной формы превышает допустимое значение.','UPLOADER_UPLOADING_ERROR4':'Размер файла превышает допустимый.','UPLOADER_UPLOADING_ERROR5':'Не получен ответ от сервера.','UPLOADER_UPLOADING_ERROR6':'Не достаточно места на сервере. ','UPLOADER_UPLOADING_ERROR3':'Файл не склеен на сервере.','UPLOADER_UPLOADING_ONBEFOREUNLOAD':'Загрузка файлов не завершена. Вы хотите покинуть страницу?'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'IM_WN_WIN':'Ваш браузер поддерживает отображение уведомлений вне браузера на панели задач Windows.','IM_WN_MAC':'Ваш браузер поддерживает отображение уведомлений вне браузера на рабочем столе.','IM_WN_TEXT':'Если вы хотите получать уведомления таким способом, вам необходимо разрешить это действие.','IM_WN_ACCEPT':'Разрешить','IM_WN_CANCEL':'Больше не предлагать','IM_CL_TAB_LIST':'Контакты','IM_CL_TAB_RECENT':'Последние','IM_ICON_SET':'Набор иконок','IM_MENTION_MENU':'Упомянуть пользователя или открытый чат','IM_COMMAND_MENU':'Открыть список доступных команд','IM_HIDDEN_MODE_MENU':'Включить/выключить режим скрытой от клиента переписки','IM_ANSWERS_MENU':'Открыть список типовых ответов','IM_FORMS_MENU':'Открыть список CRM-форм','IM_SMILE_MENU':'Выбор смайлов','IM_SMILE_NA':'Смайлы не доступны.','IM_SMILE_SET':'наборы','IM_RECENT_TODAY':'сегодня','IM_RECENT_YESTERDAY':'вчера','IM_M_SEARCH':'Поиск','IM_M_SEARCH_PLACEHOLDER':'Введите имя или фамилию','IM_M_SEARCH_PLACEHOLDER_CP':'Имя, фамилия или отдел','IM_M_NEW_MESSAGE':'Новое сообщение','IM_M_HISTORY':'История сообщений','IM_M_HISTORY_DELETE_ALL':'Удалить все сообщения','IM_M_HISTORY_DELETE_ALL_CONFIRM':'Вы уверены что хотите удалить всю историю сообщений?','IM_M_HISTORY_DELETE':'Удалить сообщение','IM_M_HISTORY_DELETE_CONFIRM':'Вы уверены что хотите удалить это сообщение?','IM_M_HISTORY_LINES_VOTE':'Поставить оценку как руководитель','IM_M_HISTORY_LINES_JOIN':'Открыть диалог с пользователем','IM_M_SEND_FILE':'Передать файл','IM_M_SEND_MESSAGE':'Отправить','IM_M_AVATAR_UPLOAD':'Кликните для изменения иконки чата','IM_M_AVATAR_UPLOAD_2':'Кликните для изменения иконки звонка','IM_M_CONTACT_LIST':'Список контактов','IM_M_USER_COLOR':'Цвет фона вашего диалога в мобильном чате','IM_M_OPEN_DESKTOP_FROM_PANEL':'Запускать приложение при клике на панель быстрого доступа','IM_M_DESKTOP_AUTORUN_ON':'Включить автозапуск программы','IM_M_DESKTOP_BIG_SMILE_ON':'Использовать большие смайлы','IM_M_VIEW_LAST_MESSAGE_OFF':'Скрыть сообщения в списке \"Последние\"','IM_M_VIEW_OFFLINE_OFF':'Скрыть отсутствующих пользователей','IM_M_VIEW_OL_LIST':'Открытые линии выделять в отдельный список','IM_M_VIEW_OL_SORT':'Формат списка открытых линий','IM_M_VIEW_OL_SORT_1':'Разделен на неотвеченные/отвеченные','IM_M_VIEW_OL_SORT_1_TIP':'<b>Разделен на неотвеченные/отвеченные<\/b> - в списке диалогов в первую очередь будут показаны ожидающие вашего ответа, даже если вы уже просмотрели сообщение, но не ответили на него.','IM_M_VIEW_OL_SORT_2':'Сортировка диалогов от старых к новым','IM_M_VIEW_OL_SORT_2_TIP':'<b>Сортировка диалогов от старых к новым<\/b> - сортировка выполняется по дате создания диалога. Соответственно новые попадают в конец списка. ','IM_M_VIEW_OL_SORT_3':'Диалоги с последними сообщениями сверху','IM_M_VIEW_OL_SORT_3_TIP':'<b>Диалоги с последними сообщениями сверху<\/b> - сортировка выполняется по дате последнего сообщения в диалоге.','IM_M_VIEW_GROUP_OFF':'Скрыть группы пользователей','IM_M_NOTIFY_AUTO_READ':'Отключить автоматическое прочтение уведомлений','IM_M_ENABLE_SOUND':'Включить звуковые оповещения','IM_M_ENABLE_BIRTHDAY':'Включить уведомление о дне рождения','IM_M_ENABLE_ONLINE_NOTIFY':'Включить уведомление о появлении в сети','IM_M_LLM':'Загружать последние сообщения','IM_M_LLN':'Загружать историю уведомлений','IM_M_NAR':'Автоматическое прочтение уведомлений','IM_M_KEY_SEND':'Сочетание клавиш для отправки сообщения','IM_M_AUTO_CORRECT':'Включить автокоррекцию сообщений','IM_M_QUOTE_TITLE':'Кликните для цитирования сообщения','IM_M_OPEN_SETTINGS':'Открыть окно настроек','IM_M_SEND_TYPE_TITLE':'Кликните для смены горячей клавиши','IM_M_ERROR':'Ошибка загрузки данных','IM_SETTINGS':'Настройки','IM_FULLSCREEN':'Перейти в полноэкранный режим','IM_FULLSCREEN_EXIT':'Выйти из полноэкранного режима','IM_SETTINGS_SAVE':'Сохранить','IM_SETTINGS_CLOSE':'Закрыть','IM_SETTINGS_WAIT':'Сохранение...','IM_SETTINGS_LOAD':'Загрузка настроек...','IM_SETTINGS_COMMON':'Основные','IM_SETTINGS_SNOTIFY':'Отключенные уведомления','IM_SETTINGS_SNOTIFY_ENABLE':'Включить','IM_SETTINGS_NOTIFY':'Уведомления','IM_SETTINGS_NOTIFY_SITE':'Сайт и<br>приложения','IM_SETTINGS_NOTIFY_XMPP':'Внешние клиенты','IM_SETTINGS_NOTIFY_EMAIL':'Электронная почта','IM_SETTINGS_NOTIFY_PUSH':'Push уведомления','IM_SETTINGS_PRIVACY':'Приватность','IM_SETTINGS_PRIVACY_CALL':'Принимать звонки от','IM_SETTINGS_PRIVACY_MESS':'Принимать сообщения от','IM_SETTINGS_PRIVACY_CHAT':'Приглашать меня в чат могут','IM_SETTINGS_PRIVACY_SEARCH':'Показывать меня при поиске','IM_SETTINGS_PRIVACY_PROFILE':'Показывать мой полный профиль','IM_SETTINGS_SELECT_1':'всех пользователей','IM_SETTINGS_SELECT_2':'моих контактов','IM_SETTINGS_SELECT_3':'никого','IM_SETTINGS_SELECT_1_2':'все пользователи','IM_SETTINGS_SELECT_2_2':'мои контакты','IM_SETTINGS_SELECT_3_2':'никто','IM_SETTINGS_SELECT_1_3':'всем пользователям','IM_SETTINGS_SELECT_2_3':'моим контактам','IM_SETTINGS_SELECT_3_3':'никому','IM_SETTINGS_NS_1':'Простой режим','IM_SETTINGS_NS_2':'Расширенный режим','IM_SETTINGS_NSL_1':'Получать только важные уведомления','IM_SETTINGS_NSL_2':'Получать все уведомления','IM_SETTINGS_NC_1_NEW':'Получать стандартные уведомления на:','IM_SETTINGS_NC_2':'Сайт, мобильное и десктопное приложения','IM_SETTINGS_NC_3':'Внешние клиенты (XMPP, Jabber)','IM_SETTINGS_NC_4':'Электронную почту (#MAIL#)','IM_SETTINGS_NC_5':'Push-уведомления (мобильное приложение)','IM_SETTINGS_HARDWARE':'Оборудование','IM_SETTINGS_HARDWARE_MICROPHONE':'Микрофон','IM_SETTINGS_HARDWARE_DEFAULT_MICROPHONE':'По умолчанию','IM_SETTINGS_HARDWARE_AUTO_PARAMETERS_MICROPHONE':'Автоматически регулировать параметры микрофона','IM_SETTINGS_HARDWARE_CAMERA':'Камера','IM_SETTINGS_HARDWARE_SPEAKER':'Динамики','IM_SETTINGS_HARDWARE_NOT_FOUND':'Устройства не найдены','IM_M_OPEN_CHAT':'Перейти в чат','IM_M_WRITE_MESSAGE':'Написать сообщение','IM_M_OPEN_HISTORY':'Открыть историю','IM_M_OPEN_HISTORY_2':'Открыть историю сообщений','IM_M_OPEN_PROFILE':'Профиль пользователя','IM_M_HIDE_CALL':'Скрыть звонок','IM_M_HIDE_DIALOG':'Скрыть диалог','IM_M_HIDE_CHAT':'Скрыть чат','IM_M_CL_CHAT':'Мои чаты','IM_M_OLD_REVISION':'Для продолжения работы с \"#WM_NAME#\" необходимо перезагрузить страницу.','IM_M_OLD_BROWSER':'Веб-мессенджер не поддерживает Internet Explorer версии 7 и ниже. Обновите браузер или установите десктопное приложение.','IM_M_OLD_BROWSER_2':'Веб-мессенджер не поддерживает Internet Explorer версии 10 и ниже. Обновите браузер или установите десктопное приложение.','IM_M_S_ON':'Опция включена','IM_M_S_OFF':'Опция выключена','IM_M_CL_NOT_IN':'Пользователь не найден в списке контактов, чтобы начать с ним диалог, вам необходимо добавить его в друзья.','IM_M_CL_NOT_IN_ADD':'Добавить в друзья','IM_M_EMPTY':'Начните диалог, выбрав контакт из списка слева.','IM_M_SYSTEM_USER':'Системное сообщение','IM_M_BIRTHDAY_MESSAGE':'#USER_NAME# празднует сегодня день рождения!','IM_M_CALL_EFP':'Если уйдёте со страницы, звонок прервётся!','IM_M_CALL_SCREEN':'Демонстрация экрана','IM_M_CALL_SCREEN_ERROR':'Демонстрация экрана доступна только в новой версии десктоп-приложения Битрикс24. Установите приложение на свой компьютер, чтобы показать вашему собеседнику презентацию, отчет или другие файлы со своего экрана.','IM_M_CALL_VOICE':'Звонок','IM_M_CALL_VIDEO':'Видеозвонок','IM_M_CALL_CANCEL':'Завершить звонок','IM_M_CALL_VIDEO_FROM':'Видеозвонок от #USER#','IM_M_CALL_VIDEO_TO':'Видеозвонок c #USER#','IM_CALL_GROUP_VIDEO_FROM':'Групповой видеозвонок от \"#CHAT#\"','IM_CALL_GROUP_VIDEO_TO':'Групповой видеозвонок c \"#CHAT#\"','IM_CALL_GROUP_VOICE_FROM':'Групповой звонок от \"#CHAT#\"','IM_CALL_GROUP_VOICE_TO':'Групповой звонок c \"#CHAT#\"','IM_M_CALL_ST_NO_WEBRTC':'Пользователь не может принять звонок: он либо не в сети, либо использует приложение, не поддерживающее звонки','IM_M_CALL_ST_NO_WEBRTC_1':'Пользователи не могут принять звонок: они либо не в сети, либо используют приложения, не поддерживающие звонки','IM_M_CALL_ST_NO_WEBRTC_2':'Вы не можете принять звонок, так как ваш браузер не поддерживает звонки. ','IM_M_CALL_ST_NO_WEBRTC_3':'Вы не можете принять звонок, так как ваше приложение не поддерживает звонки.','IM_M_CALL_ST_CALL_INIT':'Инициализация звонка','IM_M_CALL_ST_PHONE_NOTICE':'Инициализация звонка через телефонный аппарат','IM_M_CALL_ST_WAIT_PHONE':'Для начала звонка необходимо поднять телефонную трубку','IM_M_CALL_ST_WAIT_ACCESS':'Подтверждение доступа к аудио/видео устройствам','IM_M_CALL_ST_CON_ERROR':'Вы не можете позвонить, так как не удалось получить доступ к мультимедиа серверу.','IM_M_CALL_ST_NO_ACCESS_SSH':'Вы не можете позвонить, так как не удалось получить доступ к вашему экрану. Проверьте включена ли опция \"enable-usermedia-screen-capture\" и повторите звонок.','IM_M_CALL_ST_RECALL':'Повторный звонок будет осуществлен через #MINUTE# мин.','IM_M_CALL_ST_ALFA':'Экспериментальная реализация','IM_M_CALL_ST_FINISHED':'Звонок завершен','IM_M_CALL_BTN_PLUS':'Добавить пользователя в разговор','IM_M_CALL_BTN_DOWNLOAD':'Скачать десктопное приложение','IM_M_CALL_BTN_UPDATE':'Обновить','IM_M_CALL_BTN_RECALL_2':'через 5 минут','IM_M_CALL_BTN_RECALL_3':'Повторить вызов','IM_M_CALL_BTN_HISTORY':'История','IM_M_CALL_BTN_HISTORY_2':'История переписки с пользователем','IM_M_CALL_BTN_CHAT':'Чат','IM_M_CALL_BTN_CHAT_2':'Открыть чат с пользователем','IM_M_CALL_BTN_MAXI':'Развернуть окно звонка','IM_M_CALL_BTN_FULL':'Включить/выключить полноэкранный режим','IM_M_CALL_BTN_SCREEN_TITLE':'Включить/выключить демонстрацию экрана','IM_M_CALL_BTN_DEVICE_TITLE':'Звонок совершается через телефонный аппарат. Кликните для совершения звонка через браузер/приложение.','IM_M_CALL_BTN_DEVICE_OFF_TITLE':'Звонок совершается через браузер/приложение. Кликните для совершения звонка через телефонный аппарат.','IM_M_CALL_BTN_HOLD_TITLE':'Включить/выключить удержание','IM_M_CALL_TRANSFER_TEXT':'Перенаправить текущий звонок на пользователя','IM_M_CALL_ALLOW_BTN':'Разрешить','IM_M_CALL_ALLOW_TEXT':'Нажмите кнопку <b>\"Разрешить\"<\/b><br> в появившемся сверху уведомлении браузера, чтобы мы могли установить соединение','IM_CALL_CHAT_LARGE':'Вы не можете совершить звонок, так как в чате более 4х участников.','IM_CALL_GROUP_MAX_USERS':'Вы не можете пригласить пользователей, так как в групповом звонке не может быть более 4х участников.','IM_CALL_NO_WEBRT':'Вы не можете совершить звонок, так как ваш браузер не поддерживает звонки.','IM_CALL_DESKTOP_2':'Вы не можете совершить звонок, так как ваше приложение не поддерживает звонки.','IM_CALL_MAGNIFY':'Увеличить видео','IM_PHONE_CALL_RECORD':'Позвонить с записью','IM_PHONE_CALL_NO_RECORD':'Позвонить без записи','IM_PHONE_CALL':'Позвонить','IM_PHONE_DIAL_CURRENT':'Звонок по сделке','IM_PHONE_PUT_NUMBER':'Введите номер','IM_PHONE_PUT_DIGIT':'Введите цифру','IM_PHONE_ERROR_NA_PHONE':'Телефонный аппарат недоступен, проверьте параметры подключения','IM_PHONE_OPEN_KEYPAD':'Открыть клавиатуру','IM_PHONE_DESC':'Телефонный звонок','IM_PHONE_WORK_PHONE':'Рабочий телефон','IM_PHONE_PERSONAL_MOBILE':'Мобильный телефон','IM_PHONE_PERSONAL_PHONE':'Телефон','IM_PHONE_INNER_PHONE':'Добавочный','IM_PHONE_RECALL':'Перезвонить на телефон','IM_PHONE_INNER_CALL':'Внутренний звонок','IM_PHONE_STATUS_HARDWARE':'Запрашиваем доступ к микрофону','IM_PHONE_STATUS_CONNECTING':'Установка соединения...','IM_PHONE_STATUS_CONNECTED':'Соединение установлено','IM_PHONE_STATUS_ERROR_USE_HTTPS':'Невозможно получить доступ к микрофону. Согласно политике браузера Google Chrome, доступ к микрофону возможен только при использовании протокола HTTPS','IM_PHONE_STATUS_ERROR_UNKNOWN':'Неизвестная ошибка','IM_PHONE_TIMER_WITH_RECORD':'Идет запись #MIN#:#SEC# мин.','IM_PHONE_TIMER_WITHOUT_RECORD':'Продолжительность разговора #MIN#:#SEC# мин.','IM_M_CHAT_TITLE':'Пригласить пользователей в чат','IM_M_MENTION_TITLE':'Упомянуть пользователя','IM_M_CHAT_SHOW_HISTORY':'Показать историю диалога','IM_M_CHAT_BTN_JOIN':'Пригласить','IM_M_CHAT_BTN_EDIT':'Изменить','IM_M_CHAT_BTN_CANCEL':'Отменить','IM_M_CHAT_MORE_USER':'и еще #USER_COUNT#','IM_M_CHAT_RENAME':'Переименовать чат','IM_M_CHAT_MUTE_ON':'Включить уведомления','IM_M_CHAT_MUTE_OFF':'Отключить уведомления','IM_M_CHAT_MUTE_ON_2':'Кликните чтобы включить уведомления в чате.','IM_M_CHAT_MUTE_OFF_2':'Кликните чтобы отключить уведомления в чате.','IM_M_USER_BLOCK_ON':'Кликните чтобы включить блокировку пользователя.','IM_M_USER_BLOCK_OFF':'Кликните чтобы отключить блокировку пользователя.','IM_M_CHAT_EXIT':'Покинуть чат','IM_M_CHAT_KICK':'Исключить из чата','IM_M_CHAT_PUT':'Вставить имя','IM_M_CHAT_ERROR_1':'Для создания чата, необходимо указать участников','IM_NM_MESSAGE_1':'Новые сообщения (#COUNT#)','IM_NM_MESSAGE_2':'У вас есть непрочитанные сообщения от #USERS#','IM_NM_NOTIFY_1':'Новые уведомления (#COUNT#)','IM_NM_NOTIFY_2':'У вас есть непрочитанные уведомления от #USERS#','IM_NM_NOTIFY_3':'У вас есть непрочитанные уведомления','IM_NOTIFY_DELETE_1':'Удалить уведомление','IM_NOTIFY_DELETE_2':'Не оповещать об уведомлениях данного типа','IM_NOTIFY_DELETE_3':'Оповещать об уведомлениях данного типа','IM_NOTIFY_CENTER':'Центр уведомлений','IM_NOTIFY_NEW_MESSAGE':'У вас есть новое уведомление','IM_NOTIFY_NEW_MESSAGE_MORE':'У вас есть #COUNT# новых уведомлений','IM_PHONE_BUTTON_TITLE':'Телефон','IM_NOTIFY_BUTTON_TITLE':'Уведомления','IM_NOTIFY_WINDOW_TITLE':'Уведомления','IM_NOTIFY_WINDOW_NEW_TITLE':'Новые уведомления','IM_NOTIFY_GROUP_NOTIFY':'#USER_NAME# и еще #U_START##COUNT# человек(а)#U_END#','IM_NOTIFY_EMPTY':'Нет уведомлений','IM_NOTIFY_EMPTY_2':'Нет новых уведомлений','IM_NOTIFY_EMPTY_3':'Нет уведомлений за последние 30 дней','IM_NOTIFY_ERROR':'Невозможно загрузить уведомления, проверьте параметры подключения к сети.','IM_NOTIFY_HISTORY':'Прочитанные уведомления','IM_NOTIFY_HISTORY_2':'Загрузить уведомления','IM_NOTIFY_HISTORY_LATE':'Загрузить более ранние уведомления','IM_NOTIFY_HISTORY_MORE':'Еще уведомления','IM_NOTIFY_CONFIRM_CLOSE':'Закрыть','IM_NOTIFY_LOAD_NOTIFY':'Загрузка уведомлений','IM_MESSAGE_EDIT_TEXT':'Редактирование сообщения','IM_PANEL_FILTER_NAME':'Фильтр:','IM_PANEL_FILTER_DATE':'Выберите дату','IM_PANEL_FILTER_TEXT':'Введите текст для поиска','IM_PANEL_FILTER_ON':'Включить фильтр','IM_PANEL_FILTER_OFF':'Отключить фильтр','IM_HISTORY_FILTER_NAME':'Поиск:','IM_HISTORY_FILTER_ON':'Включить поиск','IM_HISTORY_FILTER_OFF':'Отключить поиск','IM_HISTORY_JUMP':'Перейти к разговору','IM_HISTORY_RELATED':'Показать контекст','IM_HISTORY_NEARBY':'следующее и предыдущее сообщение','IM_DESKTOP_B24_TITLE':'Битрикс24 для Windows','IM_DESKTOP_B24_OSX_TITLE':'Битрикс24 для OS X','IM_DESKTOP_B24_LINUX_TITLE':'Битрикс24 для Linux','IM_DESKTOP_OPEN_MESSENGER':'Сообщения #COUNTER#','IM_DESKTOP_OPEN_NOTIFY':'Уведомления #COUNTER#','IM_DESKTOP_GO_SITE':'Живая лента #COUNTER#','IM_DESKTOP_STATUS_OFFLINE':'Выход','IM_DESKTOP_SETTINGS':'Настройки','IM_DESKTOP_LOGOUT':'Сменить пользователя','IM_DESKTOP_BDISK':'Битрикс24.Диск','IM_DESKTOP_INSTALL':'Используйте \"#WM_NAME#\" более эффективно, установив приложение для #OS#','IM_DESKTOP_INSTALL_Y':'Установить','IM_DESKTOP_INSTALL_N':'Нет, спасибо','IM_DESKTOP_UNREAD_EMPTY':'Нет новых сообщений или уведомлений','IM_DESKTOP_UNREAD_MESSAGES_NOTIFY':'У вас есть непрочитанные сообщения и уведомления','IM_DESKTOP_UNREAD_NOTIFY':'У вас есть непрочитанные уведомления','IM_DESKTOP_UNREAD_MESSAGES':'У вас есть непрочитанные сообщения','IM_DESKTOP_UNREAD_LF':'У вас есть непрочитанные сообщения в живой ленте','IM_DESKTOP_NEED_UPDATE':'Версия вашего приложения сильно устарела, для дальнейшей работы необходимо установить новую версию.','IM_DESKTOP_NEED_UPDATE_BTN':'Обновить приложение','IM_DESKTOP_RECONNECT':'Восстановление подключения','IM_SSH_TEXT':'Для демонстрации экрана вам необходимо включить опцию<br> \"<i>enable-usermedia-screen-capture<\/i>\" в системных настройках.<br><br> Для этого вам необходимо открыть новую страницу с адресом <b>chrome://flags/#enable-usermedia-screen-capture<\/b>, включить опцию и перезапустить браузер.','IM_SSH_OK':'Продолжить','IM_SSH_CANCEL':'Отмена','IM_WM':'Веб-мессенджер','IM_BC':'Бизнес-чат','IM_CNC':'Чат и звонки','IM_MENU_SUGGEST_EMPTY':'нет вариантов','IM_MENU_COPY':'Копировать','IM_MENU_COPY2':'Копировать сообщение','IM_MENU_ANSWER':'Ответить','IM_MENU_QUOTE':'Цитировать выделенное','IM_MENU_QUOTE2':'Цитировать сообщение','IM_MENU_READ':'Отметить как прочитанное','IM_MENU_UNREAD':'Отметить как непрочитанное','IM_MENU_CUT':'Вырезать','IM_MENU_PASTE':'Вставить','IM_MENU_DELETE':'Удалить','IM_MENU_UNDO':'Отменить','IM_MENU_REDO':'Повторить','IM_MENU_COPY3':'Копировать ссылку','IM_MENU_COPY_FILE':'Копировать файл','IM_MENU_EDIT':'Редактировать сообщение','IM_TIP_OL_SYSTEM':'Сообщения, отмеченные замочком, не видны внешнему собеседнику.','IM_TIP_WEBRTC_ON':'Режим отладки видео-звонков <b>включен<\/b>.','IM_TIP_WEBRTC_OFF':'Режим отладки видео-звонков <b>выключен<\/b>.','IM_TIP_AC_ON':'Автокоррекция сообщений <b>включена<\/b>.','IM_TIP_AC_OFF':'Автокоррекция сообщений <b>выключена<\/b>.','IM_F_ERR_NC':'Работа с файлами доступна только после создания чата','IM_F_FILE_SEARCH':'Введите имя файла','IM_F_NO_FILES':'Файлы не загружены','IM_F_NO_FILES_2':'Нет файлов','IM_F_LOAD_FILES':'Загрузка файлов','IM_F_MENU':'Открыть меню действий','IM_F_UPLOAD_MENU_1':'Выбрать на компьютере','IM_F_UPLOAD_MENU_1_M':'Выбрать на устройстве','IM_F_UPLOAD_MENU_2':'Выбрать на моем Диске','IM_F_UPLOAD_MENU':'Отправить файл','IM_F_SAVE_OK':'Файл успешно сохранен на ваш Диск','IM_F_SAVE_ERR':'При сохранении файла произошла ошибка, повторите попытку позднее.','IM_CS_ONLINE':'Соединение с сервером установлено','IM_CS_OFFLINE':'Отсутствует соединение с сервером','IM_CS_CONNECTING':'Устанавливаем соединение с сервером','IM_CS_RELOAD':'Перезагрузить','IM_SAVING':'Сохранение...','IM_DELETING':'Удаление...','IM_CHAT_ID_IS':'Идентификатор чата: #CHAT_ID#','IM_M_TA_TEXT':'Введите сообщение','IM_P_LINK':'Ссылка:','IM_P_OPEN':'Открыть оригинал','IM_P_CLOSE':'Закрыть','IM_PF_TITLE':'Список файлов','IM_PM_TITLE':'Вас упомянули','IM_COMMAND_TITLE':'Команды','IM_COMMAND_H_1':'Tab или &uarr;&darr; для переключения','IM_COMMAND_H_2':'Enter или пробел для выбора','IM_COMMAND_H_3':'Esc для отмены','IM_OL_TRANSFER_TEXT':'Переадресовать текущий разговор на пользователя','IM_CALL_ERROR_HARDWARE':'Не удалось получить доступ к камере и микрофону. Ошибка:','IM_CALL_ERROR_CONNECTION':'Ошибка подключения к медиа-серверу:','IM_CALL_HARDWARE_REQUEST':'Запрашиваем доступ к камере и микрофону','IM_CALL_ACCESS_GRANTED':'Доступ получен','IM_CALL_USER_DISCONNECTED':'отключился от звонка','IM_CALL_USER_CONNECTED':'подключился к звонку','IM_CALL_CONNECTING':'Подключаемся к медиа-серверу','IM_CALL_CONNECTED':'Подключились к серверу','IM_CALL_PUBLISHING':'Публикуем медиа-поток','IM_CALL_PUBLISHING_STOPPED':'Остановили публикацию медиа-потока','IM_CALL_PUBLISHING_ERROR':'Ошибка публикации медиа-потока','IM_CALL_WAITING_CONNECT':'Ожидаем подключения участников звонка','IM_CALL_HARDWARE_MIC':'Микрофон','IM_CALL_HARDWARE_CAMERA':'Камера','IM_CALL_HARDWARE_RESOLUTION':'Разрешение','IM_CALL_EXPERIMENTAL_BUTTON':'Подключиться к звонку','IM_CALL_MIC_TEST_BUTTON':'Тест микрофона','IM_CALL_MIC_TEST_RECORD_START':'Начать запись','IM_CALL_MIC_TEST_RECORD_STOP':'Остановить запись','IM_CALL_MIC_TEST_PLAY_START':'Начать воспроизведение','IM_CALL_MIC_TEST_PLAY_STOP':'Остановить воспроизведение','IM_CALL_MIC_TEST_CLOSE':'Закрыть','IM_OL_VOTE_TEXT':'Оцените качество обслуживания','IM_OL_VOTE_TNX':'Спасибо за оценку!','IM_OL_VOTE_LIKE':'Нравится','IM_OL_VOTE_DISLIKE':'Не нравится'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'PULL_OLD_REVISION':'Для продолжения корректной работы с сайтом необходимо перезагрузить страницу.'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BOXID','SERVER_TZ_OFFSET':'28800','SITE_ID':'s1','SITE_DIR':'/','USER_ID':'22051','SERVER_TIME':'1504800678','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'3d2d3549b31cfbd6a61aa8ac3e52cd89'});</script>
+
+
+<script type="text/javascript" src="/bitrix/js/main/core/core.js?1501126892118107"></script>
+<script type="text/javascript" src="/bitrix/js/main/json/json2.min.js?15011234363467"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ls.js?150112569910430"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ajax.js?150112689236424"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_popup.js?150112676158656"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_date.js?150112637753474"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_fx.js?150112667916888"></script>
+<script type="text/javascript" src="/bitrix/js/im/common.js?1501483341434517"></script>
+<script type="text/javascript" src="/bitrix/js/im/phone_call_view.js?1501126928139656"></script>
+<script type="text/javascript" src="/bitrix/js/main/webrtc/adapter.js?150112650692967"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_webrtc.js?150112667923560"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_dd.js?15011262863613"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_uploader/common.js?150112674915583"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_uploader/uploader.js?150112667958839"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_uploader/file.js?150112676138275"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_uploader/queue.js?150112667917029"></script>
+<script type="text/javascript" src="/bitrix/js/im/im.js?1501126926809829"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_window.js?150112689297266"></script>
+<script type="text/javascript" src="/bitrix/js/pull/pull.js?150114480143963"></script>
+<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=Rcoes7A6NmO1k1m/VItYPJ6iiugfR*irqLJezG7DTKyG4LAZxEQQm1FNSRQOv5hXdGrjvRvpSH1lHZ4V6PEgFdUajdhON1*zk1wjX1zFraIold4Bc4R0U6kTiSPhlm7SliKo8Ik4PlhOmEHN5etQv8oSXlGD0KGpqBbANioSn1U-';</script>
+<script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-145281-3', 'karopka.ru');ga('send', 'pageview');</script>
+<script src="/bitrix/js/main/utils.js"></script>
+
+
+
+<script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js?150375537986659"></script>
+<script type="text/javascript" src="/gfx/ui.drag.js?129348360028884"></script>
+<script type="text/javascript" src="/gfx/sb/sb.js?129348360037487"></script>
+<script type="text/javascript" src="/gfx/rocon.js?128950920010685"></script>
+<script type="text/javascript" src="/gfx/common_v2.js?150375555016015"></script>
+<script type="text/javascript" src="/assets/js/fotorama.js?142859024438912"></script>
+<script type="text/javascript" src="/assets/js/likely.js?150062869620900"></script>
+<script type="text/javascript">BX.bind(window, "load", function() { BX.PULL.start({'CHANNEL_ID':'d7d07822022f221658df2ecc991d9058','CHANNEL_DT':'1504786600','USER_ID':'22051','LAST_ID':'0','PATH':'/bitrix/components/bitrix/pull.request/ajax.php?UPDATE_STATE','PATH_MOD':'','PATH_WS':'','PATH_COMMAND':'','METHOD':'PULL','REVISION':'14','ERROR':''}); });</script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "89259c064e359cc31657fc2b8ca1cf89"]); _ba.push(["host", "karopka.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+<script>new Image().src='http://karo.pk/bitrix/spread.php?s=Qk9YSURfR1VFU1RfSUQBMTI4OTAyODMBMTUzNTkwNDY3OAEvAQEBAkJPWElEX0xBU1RfVklTSVQBMDguMDkuMjAxNyAwMDoxMToxOAExNTM1OTA0Njc4AS8BAQEC&k=d9d4e8b8d34254f9bdbb0b758f330b91';
+</script>
+
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<meta name='yandex-verification' content='562f82c49a3029b1'/>
+		<meta name="google-site-verification" content="SLA0rnxiH6f2F-eZS7d-EENG7-0xeRphvhfXaRuJQ60"/>
+
+		<title>Паровой буксир &quot;Первый&quot; &mdash; Каропка.ру &mdash; стендовые модели, военная миниатюра</title>
+			</head>
+<body>
+	<div id="topPanel"></div>
+<div id="pageOverflow">
+	<div id="topLine">
+		<span><span class="links"><a href="/community/user/22051/" class="mypage"><i></i><b>Шура  (Miroag)</b></a><a href="/community/warehouse/" class="warehouse"><i></i><b>Мои файлы</b></a><a href="/publish/" class="addmodel"><i></i><b>Добавить модель</b></a><a href="/videos/publish.php" class="addmodel"><i></i><b>Добавить видео</b></a><a href="/forum/" class="addmodel common"><i></i><b>Форумы</b></a><a href="/v2/statistics.php" class="stat"><i></i><b>Рейтинги</b></a><a href="/faq/"><b>FAQ</b></a><a href="/community/user/22051/?logout=yes&amp;MODEL=464829" class="logout"><i></i><b>Выход</b></a></span></span>		<div class="search" style="float:right;position:relative;top:-8px;width:300px">
+			<div class="ya-site-form ya-site-form_inited_no"
+				 onclick="return {'action':'http://karopka.ru/search/','arrow':false,'bg':'transparent','fontsize':12,'fg':'#000000','language':'ru','logo':'rb','publicname':'Поиск по Каропке','suggest':true,'target':'_self','tld':'ru','type':2,'usebigdictionary':true,'searchid':2305312,'input_fg':'#000000','input_bg':'#ffffff','input_fontStyle':'normal','input_fontWeight':'normal','input_placeholder':'','input_placeholderColor':'#000000','input_borderColor':'#7f9db9'}">
+				<form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input
+						type="hidden" name="searchid" value="2305312"/><input type="hidden" name="l10n"
+																			  value="ru"/><input type="hidden"
+																								 name="reqenc"
+																								 value="utf-8"/><input
+						type="search" name="text" value=""/><input type="submit" value="Найти"/></form>
+			</div>
+			<style type="text/css">.ya-page_js_yes .ya-site-form_inited_no {
+					display: none;
+				}</style>
+			<script type="text/javascript">(function(w, d, c) {
+					var s = d.createElement('script'), h = d.getElementsByTagName('script')[0], e = d.documentElement;
+					if ((' ' + e.className + ' ').indexOf(' ya-page_js_yes ') === -1) {
+						e.className += ' ya-page_js_yes';
+					}
+					s.type = 'text/javascript';
+					s.async = true;
+					s.charset = 'utf-8';
+					s.src =
+						(d.location.protocol === 'https:' ? 'https:' : 'http:') + '//site.yandex.net/v2.0/js/all.js';
+					h.parentNode.insertBefore(s, h);
+					(w[c] || (w[c] = [])).push(function() {Ya.Site.Form.init()})
+				})(window, document, 'yandex_site_callbacks');</script>
+		</div>
+	</div>
+
+<div id="bx_incl_area_1"><div id="bx-notifier-panel" class="bx-notifier-panel">
+	<span class="bx-notifier-panel-left"></span><span class="bx-notifier-panel-center"><span class="bx-notifier-drag">
+	</span><span class="bx-notifier-indicators"><a href="javascript:void(0)" class="bx-notifier-indicator bx-notifier-call" title="Совершить звонок"><span class="bx-notifier-indicator-text"></span><span class="bx-notifier-indicator-icon"></span><span class="bx-notifier-indicator-count"></span>
+		</a><a href="javascript:void(0)" class="bx-notifier-indicator bx-notifier-message" title="Открыть чат и звонки"><span class="bx-notifier-indicator-text"></span><span class="bx-notifier-indicator-icon"></span><span class="bx-notifier-indicator-count"></span>
+		</a><a href="javascript:void(0)" class="bx-notifier-indicator bx-notifier-notify" title="Открыть уведомления"><span class="bx-notifier-indicator-text"></span><span class="bx-notifier-indicator-icon"></span><span class="bx-notifier-indicator-count"></span>
+		</a><a class="bx-notifier-indicator bx-notifier-mail" href="#mail" title="Перейти к электронной почте" target="_blank"><span class="bx-notifier-indicator-icon"></span><span class="bx-notifier-indicator-count"></span>
+		</a><a class="bx-notifier-indicator bx-notifier-network" href="#network" title="Перейти в Битрикс24 Network" target="_blank"><span class="bx-notifier-indicator-icon"></span><span class="bx-notifier-indicator-count"></span>
+		</a></span>
+	</span><span class="bx-notifier-panel-right"></span>
+</div>
+<script type="text/javascript">
+
+			BX.ready(function() {
+				BXIM = new BX.IM(BX('bx-notifier-panel'), {
+					'init': true,
+
+					'context': 'MESSENGER',
+					'design': 'POPUP',
+					'colors': {'RED':'Красный','GREEN':'Зеленый','MINT':'Мятный','LIGHT_BLUE':'Небесный','DARK_BLUE':'Синий','PURPLE':'Фиолетовый','AQUA':'Аквамариновый','PINK':'Розовый','LIME':'Салатовый','BROWN':'Бурый','AZURE':'Лазурный','KHAKI':'Хаки','SAND':'Песочный','MARENGO':'Маренго','GRAY':'Серый','GRAPHITE':'Графитовый'},
+					'colorsHex': {'RED':'#df532d','GREEN':'#aac337','MINT':'#4ba984','LIGHT_BLUE':'#6fc8e5','DARK_BLUE':'#3e99ce','PURPLE':'#8474c8','AQUA':'#1eb4aa','PINK':'#e98fa6','LIME':'#85cb7b','BROWN':'#ab7761','AZURE':'#29619b','KHAKI':'#728f7a','SAND':'#ba9c7b','MARENGO':'#556574','GRAY':'#77828e','GRAPHITE':'#3a403e'},
+					'mailCount': 0,
+					'notifyCount': 0,
+					'messageCount': 0,
+					'counters': {'**':'6'},
+					'ppStatus': true,
+					'ppServerStatus': false,
+					'updateStateInterval': '80',
+					'openChatEnable': true,
+					'xmppStatus': false,
+					'isAdmin': false,
+					'bitrixNetwork': false,
+					'bitrixNetwork2': false,
+					'bitrix24': false,
+					'bitrix24net': false,
+					'bitrixIntranet': false,
+					'bitrixXmpp': false,
+					'bitrixMobile': false,
+					'bitrixOpenLines': false,
+					'desktop': false,
+					'desktopStatus': false,
+					'desktopVersion': 0,
+					'desktopLinkOpen': false,
+					'language': 'ru',
+					'tooltipShowed': [],
+
+					'bot': {},
+					'textareaIcon': {},
+					'command': [{'id':'def0','bot_id':'0','command':'/me','category':'Чат и звонки','common':true,'context':'','title':'Текст будет выделен курсивом','params':'текст','extranet':true},{'id':'def1','bot_id':'0','command':'/loud','category':'Чат и звонки','common':true,'context':'','title':'Текст будет выделен жирным начертанием','params':'текст','extranet':true},{'id':'def2','bot_id':'0','command':'/>>','category':'Чат и звонки','common':true,'context':'','title':'Текст будет отображен в чате как цитата','params':'текст','extranet':true},{'id':'def3','bot_id':'0','command':'/rename','category':'Чаты','common':true,'context':'chat','title':'Изменение заголовка чата','params':'новый заголовок','extranet':true},{'id':'def4','bot_id':'0','command':'/webrtcDebug','category':'Отладка','common':true,'context':'call','title':'Включение режима отладки видео-звонков','params':'','extranet':true},{'id':'def5','bot_id':'0','command':'/startTrackStatus','category':'Диалог','common':true,'context':'user','title':'Включение режима отслеживания статуса \"Онлайн\"','params':'','extranet':true},{'id':'def6','bot_id':'0','command':'/stopTrackStatus','category':'Диалог','common':true,'context':'user','title':'Отключение режима отслеживания статуса \"Онлайн\"','params':'','extranet':true}],
+
+					'smile': false,
+					'smileSet': false,
+					'settings': {'status':'online','backgroundImage':'','bxdNotify':true,'sshNotify':true,'generalNotify':true,'trackStatus':'','nativeNotify':true,'openDesktopFromPanel':true,'viewOffline':'1','viewGroup':'1','viewLastMessage':true,'enableSound':true,'enableBigSmile':true,'linesTabEnable':true,'linesTabOrder':'group','sendByEnter':false,'correctText':'','panelPositionHorizontal':'right','panelPositionVertical':'bottom','loadLastMessage':'1','loadLastNotify':'1','notifyAutoRead':true,'notifyScheme':'simple','notifySchemeLevel':'important','notifySchemeSendSite':true,'notifySchemeSendEmail':true,'notifySchemeSendXmpp':true,'notifySchemeSendPush':true,'privacyMessage':'all','privacyChat':'all','privacyCall':'contact','privacySearch':'all','privacyProfile':'all'},
+					'settingsNotifyBlocked': {},
+
+					'notify': {},
+					'unreadNotify' : {},
+					'flashNotify' : {},
+					'countNotify' : 0,
+					'loadNotify' : false,
+
+					'recent': false,
+					'users': {'22051':{'id':'22051','name':'Шура','nameList':'Шура','active':true,'firstName':'Шура','lastName':'','workPosition':'','color':'#df532d','avatar':'/upload/resize_cache/main/526/58_58_2/pip-boy1.jpg','avatarId':'1527913','status':'online','birthday':false,'gender':'M','phoneDevice':false,'extranet':false,'tzOffset':'0','network':false,'bot':false,'connector':false,'profile':'/community/user/22051/','idle':'0','mobileLastDate':'0'}},
+					'businessUsers': false,
+					'groups': {},
+					'userInGroup': {},
+					'woGroups': {},
+					'woUserInGroup': {},
+					'chat': {},
+					'userInChat': {},
+					'userChatBlockStatus': {},
+					'userChatOptions': {'GENERAL':{'AVATAR':false,'RENAME':false,'EXTEND':false,'LEAVE':false},'SONET_GROUP':{'AVATAR':false,'RENAME':false,'EXTEND':false,'LEAVE':false,'PATH':'/community/group/#ID#/','PATH_TITLE':'Перейти в группу'}},
+					'message' : {},
+					'files' : {},
+					'showMessage' : {},
+					'unreadMessage' : {},
+					'flashMessage' : {},
+					'history' : {},
+					'openMessenger' : false,
+					'openHistory' : false,
+					'openNotify' : false,
+					'openSettings' : false,
+					'externalRecentList' : '',
+
+					'currentTab' : '0',
+					'generalChatId': 0,
+					'canSendMessageGeneralChat': true,
+					'userId': 22051,
+					'userEmail': 'miroag64@gmail.com',
+					'userColor': 'RED',
+					'userGender': 'M',
+					'userExtranet': false,
+					'webrtc': {'turnServer' : 'turn.calls.bitrix24.com', 'turnServerFirefox' : '54.217.240.163', 'turnServerLogin' : 'bitrix', 'turnServerPassword' : 'bitrix', 'mobileSupport': false, 'phoneEnabled': false, 'phoneSipAvailable': false, 'phoneDeviceActive': 'N', 'phoneCanPerformCalls': 'N', 'phoneCanCallUserNumber': 'N', 'callServerEnabled': 'N', 'phoneInitiateCallViaRestApp': 'N', 'phoneCallCardRestApps': []},
+					'openlines': [],
+					'options': {'chatExtendShowHistory' : false},
+					'disk': {'enable' : false, 'external' : false},
+					'path' : {'lf' : '/', 'profile' : '/community/user/22051/', 'profileTemplate' : '/community/user/#user_id#/', 'mail' : '', 'im': '', 'call': '', 'file': '', 'crm' : []}
+				});
+			});
+		</script></div>
+	<div id="head">
+		<div id="slogan">Версия 2.0</div>
+		<a href="/"><img src="/gfx/logo2.0-8bit.png" width="168" height="125" alt="" id="logo"/></a>
+		<div id="topModelListOverflower"><div id="bx_incl_area_2"><ul id="topModelList">
+<li><a href="/community/user/17635/?MODEL=492674"><img src="/cache/1/0/c/8b0bf-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="B 757-200~Автор: Дмитрий Перфильев (perfilyev7775)" /></a></li>
+<li><a href="/community/user/20692/?MODEL=492988"><img src="/cache/8/c/e/947e1-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Ту-214 Трансаэро RA-64509~Автор: Сергей Афанасьев (Intel_Rus)" /></a></li>
+<li><a href="/community/user/21498/?MODEL=493202"><img src="/cache/2/b/d/9ded7-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Т-90А~Автор: Алексей Сыров (Chizov7)" /></a></li>
+<div id="bx_incl_area_2_1"></div><li><a href="/community/user/8686/?MODEL=492871"><img src="/cache/1/7/c/7014b-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="MAG-Fokker D.VII~Автор: SAURON" /></a></li>
+<li><a href="/community/user/17034/?MODEL=492891"><img src="/cache/3/2/f/f5842-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Ил-2 НС-37 с оленем на борту~Автор: Сергей Красильников (sk16rus)" /></a></li>
+<li><a href="/community/user/23118/?MODEL=492793"><img src="/cache/f/3/c/dbd8d-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Dornier Do J Wal ~Автор: Комендант  Севера (Комендант)" /></a></li>
+<li><a href="/community/user/10427/?MODEL=492743"><img src="/cache/b/4/e/86fcb-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Bristol F.2B Fighter   ~Автор: Andrey   (lamenka)" /></a></li>
+<li><a href="/community/user/22879/?MODEL=492593"><img src="/cache/1/4/a/aaf64-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Як-7ди~Автор: alten Ratten" /></a></li>
+<li><a href="/community/user/9641/?MODEL=492623"><img src="/cache/2/f/1/c1373-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="И-16 тип 10 1/48~Автор: Никита Макаревич (makarych)" /></a></li>
+<li><a href="/community/user/21568/?MODEL=492827"><img src="/cache/4/e/7/50c71-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Brewster  B-239 F2A-1, BW-372, судьба самолёта~Автор: Денис Догадов  (De-nis03)" /></a></li>
+<li><a href="/community/user/6897/?MODEL=492841"><img src="/cache/8/7/0/4fa28-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="КПБМ-140~Автор: Pogranihcnic" /></a></li>
+<li><a href="/community/user/6897/?MODEL=492839"><img src="/cache/b/4/3/8dece-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="ДДА-К~Автор: Pogranihcnic" /></a></li>
+<li><a href="/community/user/22048/?MODEL=493192"><img src="/cache/8/f/c/55daf-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="ИСУ-152~Автор: Дмитрий Гордеев (TankistT90)" /></a></li>
+<li><a href="/community/user/7158/?MODEL=493067"><img src="/cache/d/e/d/d8d3f-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="M6A1 Heavy Tank~Автор: Павел Черепанов (Pavel_mormon)" /></a></li>
+<li><a href="/community/user/18236/?MODEL=492787"><img src="/cache/b/e/2/2f4ed-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Boeing 777-300 Россия (Rossiya) Леолет~Автор: Владимир  (Vovik933)" /></a></li>
+<li><a href="/community/user/22551/?MODEL=492800"><img src="/cache/d/e/2/997f2-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Су - 33~Автор: Евгений Конинский (Eugen36RUS)" /></a></li>
+<li><a href="/community/user/22551/?MODEL=492809"><img src="/cache/c/2/a/92ff6-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Миг 31~Автор: Евгений Конинский (Eugen36RUS)" /></a></li>
+<li><a href="/community/user/19046/?MODEL=492737"><img src="/cache/b/4/0/2baab-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="F/A-18F Super Hornet~Автор: Дмитрий С. (Gruzim.Dm)" /></a></li>
+<li><a href="/community/user/14720/?MODEL=492703"><img src="/cache/5/6/1/e4f2c-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Dh-108 1/72 VSV-Product~Автор: SergeyV" /></a></li>
+<li><a href="/community/user/12150/?MODEL=492525"><img src="/cache/1/a/2/2beb3-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Як-23~Автор: Игорь Скурихин (oscar44)" /></a></li>
+<li><a href="/community/user/13832/?MODEL=492898"><img src="/cache/0/2/f/41b09-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="V-2 Rocket Transporter/Erector Meillerwagen+Hanomag SS100~Автор: Пикассо" /></a></li>
+<li><a href="/community/user/17048/?MODEL=492852"><img src="/cache/5/8/4/70b61-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Полуглиссер НКЛ-27/ПГ 117 ~Автор: Евгений  (айк)" /></a></li>
+<li><a href="/community/user/23006/?MODEL=493002"><img src="/cache/d/b/0/5facb-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Т-90А Сирийской Арабской Армии (2016, Ракка)~Автор: Виктор Востриков (Octobermanager)" /></a></li>
+<li><a href="/community/user/13587/?MODEL=492982"><img src="/cache/4/e/a/43f0c-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="M5A1 Stuart~Автор: Борис Степанов (Boris84)" /></a></li>
+<li><a href="/community/user/21132/?MODEL=492610"><img src="/cache/c/2/4/1340f-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="L-410 uvp-e~Автор: Akaspirit" /></a></li>
+<li><a href="/community/user/10700/?MODEL=491882"><img src="/cache/0/3/7/4cabd-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="H-21 Летающий Банан~Автор: Саша Sky Coyote (Sky Coyote)" /></a></li>
+<li><a href="/community/user/21924/?MODEL=492532"><img src="/cache/0/7/d/a600d-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="ЗиЛ-131 ~Автор: Orctos78" /></a></li>
+<li><a href="/community/user/23206/?MODEL=492559"><img src="/cache/b/e/3/79a63-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="БА-20. Заниженная.~Автор: Stell33" /></a></li>
+<li><a href="/community/user/18034/?MODEL=492452"><img src="/cache/7/d/7/54cb0-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Polski Fiat 508/III &quot;Lazik&quot; early version~Автор: Иван Хрупин (KanuTaH_yJIuTKa)" /></a></li>
+<li><a href="/community/user/8326/?MODEL=492831"><img src="/cache/e/3/3/35185-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Сержант Харкер &quot;Камнезуб&quot;~Автор: Tsepesh" /></a></li>
+<li><a href="/community/user/18801/?MODEL=492806"><img src="/cache/7/3/8/226c5-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="Bounty hunter cyborg~Автор: Einstürzen" /></a></li>
+<li><a href="/community/user/21789/?MODEL=492861"><img src="/cache/b/0/2/7a20c-140x90-normal-ftw.jpg" width="140px" height="90px"
+ alt="&quot;Под Шиндандом&quot;. Афганистан, 1987 год.~Автор: Андрей  (Azhevnerov)" /></a></li>
+</ul></div></div>
+		<a href="javascript:void(0);" id="top_move_right"></a><a href="javascript:void(0);" id="top_move_left"></a>
+	</div>
+
+<div id="bx_incl_area_3">  <table id="topMenu">
+   <colgroup><col width="14%" /><col width="14%" /><col width="14%" /><col width="14%" /><col width="14%" /><col width="14%" /><col width="14%" /></colgroup>
+   <tr>
+    <td><div><a href="/catalog/tank/"><img src="/gfx/tank.png" style="padding-top: 20px" width="138px" height="79px" /></a><a class="l" href="/catalog/tank/">Бронетехника</a></div></td>
+    <td><div><a href="/catalog/air/"><img src="/gfx/air.png" style="padding-top: 20px" width="124px" height="52px" /></a><a class="l" href="/catalog/air/">Авиация</a></div></td>
+    <td><div><a href="/catalog/boat/"><img src="/gfx/boat.png" style="padding-top: 30px" width="118px" height="58px" /></a><a class="l" href="/catalog/boat/">Корабли</a></div></td>
+    <td><div><a href="/catalog/truck/"><img src="/gfx/truck.png" style="padding-top: 20px" width="89px" height="72px" /></a><a class="l" href="/catalog/truck/">Автомобили</a></div></td>
+    <td><div><a href="/catalog/diorama/"><img src="/gfx/diorama.png" style="padding-top: 20px" width="104px" height="69px" /></a><a class="l" href="/catalog/diorama/">Диорамы</a></div></td>
+    <td><div><a href="/catalog/working/"><img src="/gfx/working.png" style="padding-top: 20px" width="115px" height="47px" /></a><a class="l" href="/catalog/working/">Действующие</a></div></td>
+    <td><div><a href="/catalog/something/"><img src="/gfx/something.png" style="padding-top: 25px" width="110px" height="69px" /></a><a class="l" href="/catalog/something/">Разное</a></div></td>
+   </tr>
+  </table></div></div><div id="main_whitebg" class="lrcols_overflow">
+<div class="leftcol">
+<div id="bx_incl_area_4"><div class="breadcrumbs"><a href="/">Главная</a><span> &rarr; </span><a href="/community/">Сообщество</a><span> &rarr; </span>Шура</div></div><div id="bx_incl_area_5"><script type="text/javascript">
+var phpVars;
+if (typeof(phpVars) != "object")
+	var phpVars = {};
+phpVars.cookiePrefix = 'BOXID';
+phpVars.titlePrefix = 'Каропка.ру - ';
+phpVars.messLoading = 'Загрузка...';
+phpVars.LANGUAGE_ID = 'ru';
+phpVars.bitrix_sessid = '3d2d3549b31cfbd6a61aa8ac3e52cd89';
+if (!phpVars.ADMIN_THEME_ID)
+	phpVars.ADMIN_THEME_ID = '.default';
+var photoVars = {'templatePath' : '/bitrix/components/bitrix/photogallery/templates/.default/'};
+if (typeof oObjectWD != "object")
+	var oObjectWD = {};
+</script>
+<div id="bx_incl_area_5_1"><div id="bx_incl_area_5_1_1"></div></div>
+<div id="bx_incl_area_5_2">	<h1>Паровой буксир &quot;Первый&quot;</h1>
+	<div class="fotorama" data-nav="thumbs" data-allowfullscreen="native" data-keyboard="true" data-loop="true"
+		 data-width="900" data-height="600">
+		<img src="/upload/resize_cache//9fe/900_600_1/photo_1_1477937555.jpg" width="899" height="600" data-full="/upload/9fe/photo_1_1477937555.jpg" alt="" /><img src="/upload/resize_cache//7f7/900_600_1/photo_1_1477937990.jpg" width="900" height="583" data-full="/upload/7f7/photo_1_1477937990.jpg" alt="" /><img src="/upload/resize_cache//576/900_600_1/photo_2_1477937990.jpg" width="899" height="600" data-full="/upload/576/photo_2_1477937990.jpg" alt="" /><img src="/upload/resize_cache//205/900_600_1/photo_3_1477937990.jpg" width="899" height="600" data-full="/upload/205/photo_3_1477937990.jpg" alt="" /><img src="/upload/resize_cache//844/900_600_1/photo_4_1477937990.jpg" width="899" height="600" data-full="/upload/844/photo_4_1477937990.jpg" alt="" /><img src="/upload/resize_cache//019/900_600_1/photo_5_1477937990.jpg" width="899" height="600" data-full="/upload/019/photo_5_1477937990.jpg" alt="" /><img src="/upload/resize_cache//a2b/900_600_1/photo_6_1477937990.jpg" width="899" height="600" data-full="/upload/a2b/photo_6_1477937990.jpg" alt="" /><img src="/upload/resize_cache//a2a/900_600_1/photo_7_1477937990.jpg" width="899" height="600" data-full="/upload/a2a/photo_7_1477937990.jpg" alt="" /><img src="/upload/resize_cache//f10/900_600_1/photo_8_1477937990.jpg" width="899" height="600" data-full="/upload/f10/photo_8_1477937990.jpg" alt="" /><img src="/upload/035/photo_9_1477937990.jpg" width="640" height="374" data-full="/upload/035/photo_9_1477937990.jpg" alt="" />	</div>
+
+	<table class="modelinfo">
+				<tr>
+			<td width="450px">
+				<dl>
+					<dt>Производитель:</dt>
+					<dd>Mini Mamoli</dd>
+					<dt>Дата размещения:</dt>
+					<dd>31 октября 2016 года, 22:32</dd>
+					<dt>Раздел галереи:</dt>
+					<dd>
+						<a href="/catalog/diorama/">Диорамы</a>
+					</dd>
+					<dt>Тип техники:</dt><dd>Гражданские</dd><dt>Тип двигателя:</dt><dd>Уголь-паровые</dd><dt>Страна-производитель:</dt><dd>США</dd><dt>Масштаб модели:</dt><dd>1:96</dd></dl>
+			</td>
+			<td width="180px">
+							</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="model-description">Такие паровые буксиры были привычным зрелищем в каждой американской гавани на рубеже веков. В течение 1930-х паровые двигателей постепенно уступили дорогу для дизельных двигателей и совсем исчезли в 1960-х годах. На черно белой фотографии дdа очень похожих буксира при тушении пожара Hoboken Pier, New York, 1900<br>
+<font color="#252525"><br>
+</font><br>
+В оригинале название в ките - Taurus. Так как это первая модель после 30 летнего перерыва решил перекрестить. Еще в школе занимался судомоделизмом, а потом не судьба была.<br>
+<br>
+<br>
+<br>
+<br>
+В принципе все сделал по инструкции. Единственно, обшил надстройки деревом. Красил кистью художественными акриловыми красками.  Вода сделана при помощи Vallejo Water Effects Pacific Blue. К сожалению пенный след отходящий от изгиба корпуса получился не натурально. Но уже как есть. <br>
+<br>
+ <br>
+<br>
+<br>
+<br>
+<br>
+</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<div class="likely likely-light likely-small">
+					<div class="twitter">Твитнуть</div>
+					<div class="facebook">Поделиться</div>
+					<div class="gplus">Плюсануть</div>
+					<div class="vkontakte">Поделиться</div>
+					<div class="telegram">Отправить</div>
+					<div class="odnoklassniki">Класснуть</div>
+				</div>
+
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="padding-top:0">
+									<a href="/model/proposal/464829/" style="color:#cd329a">Предложить к размещению в
+						галерею</a>
+														 &middot; 											<a href="/model/score/disable/464829/">Отключить оценки</a> &middot;
+										<a href="/model/edit/464829/">Редактировать</a> &middot;
+					<a href="/model/delete/464829/">Удалить</a>
+							</td>
+		</tr>
+					<tr>
+				<td colspan="2">
+					<form action="/v2/sale.php" method="POST">
+						<input type="hidden" name="ID" value="464829"/>
+													<p>Вы можете выставить свою модель на продажу на нашем сайте.</p>
+							<p>Цена:
+								<label><input type="radio" name="PRICE_TYPE" value="N" checked="checked"/> <input
+										style="width:80px" type="text" name="PRICE" value="0"/> рублей</label> или
+								<label><input type="radio" name="PRICE_TYPE" value="D"/>договорная</label></p>
+							<input type="submit" value="Выставить на продажу"/>
+											</form>
+				</td>
+			</tr>
+			</table>
+
+	<table class="modelinfo mismall">
+		<tr>
+			<td>
+				<b>Оценка модели по параметрам:</b>
+				<table align="center">
+					<tr>
+						<td align="center">Техника исполнения</td>
+						<td align="center">Качество окраски</td>
+						<td align="center">Матчасть</td>
+					</tr>
+					<tr>
+						<td align="center">93.67</td><td align="center">92.67</td><td align="center">89.33</td>					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="font-size: 1.6em; font-weight: 100" align="center">
+				Средняя оценка: 91.8889				<small>
+					<small><a rel="shadowbox;height=264" href="/v2/scores.php?ID=464829">(все оценки)</a>
+					</small>
+				</small>
+			</td>
+		</tr>
+		<tr>
+			<td style="font-size: 1.6em; font-weight: 100" align="center">
+				Популярность модели: 77.84			</td>
+		</tr>
+	</table>
+
+<div id="bx_incl_area_5_2_1"><div class="comments" id="cmtlist"><h2>Комментарии</h2><p><a href="/model/cmt-disable/464829/">Отключить комментарии</a></p>	<div class="bl-comment bl-first bl-pager bl-even">
+		<div class="bl-author"></div>
+		<div class="bl-leftborder">
+			<div class="bl-content">
+				<span class="forum-page-title">Страницы:</span>
+				 <span class="forum-page-first forum-page-current">1</span> <a href="/community/user/22051/?p=2&MODEL=464829#cmtlist">2</a> <a class="prevnext" href="/community/user/22051/?p=2&MODEL=464829#cmtlist">&rarr;</a></div>
+		</div></div>		<div class="bl-comment bl-even" id="comment924611">
+						<div class="bl-author"><a href="/community/user/6940/">deLoro</a>
+								<div class="bl-author-meta">
+					 <span>52 года</span><br/><span>На сайте с 07.10.2007</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/6940/" title="deLoro"><img src="/upload/main/d/b/b/a/7/3/ 27728z1y.gif" width="80px" height="80px" alt="deLoro" /></a>
+					<div class="bl-text"> Образ буксира в стиле ВанГога получился.  Вот пожалуй и всё по модели. После 30ти летнего перерыва, неплохой результат. Руки помнят!</div>					<div class="bl-meta"><a href="#comment924611">31 октября 2016 года, 23:56</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-odd" id="comment924631">
+						<div class="bl-author"><a href="/community/user/8991/">jokker</a>
+								<div class="bl-author-meta">
+					Москва<br /> <span>46 лет</span><br/><span>На сайте с 04.08.2010</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/8991/" title="jokker"><img src="/cache/0/3/f/9f4c0-80-tw.jpg" width="80px" height="111.62790697674px" alt="jokker" /></a>
+					<div class="bl-text">Так не плохо,тонировочки бы на сам буксир,выглядело бы по живее.Да и вода,как то выглядит не совсем натурально .<br />
+Цвет не совсем тот.</div><div class="bl-files">Прикрепленные файлы:<br /><a href="/upload/comments/452/P2220455.jpg" rel="shadowbox[s924631]" target="_blank"><img src="/cache/7/e/e/76e2d-200x130-normal-ftw.jpg" width="200px" height="130px" alt="" /></a></div>					<div class="bl-meta"><a href="#comment924631">1 ноября 2016 года, 1:32</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-even" id="comment924637">
+						<div class="bl-author"><a href="/community/user/10809/">Александр Рудаков (stoyn)</a>
+								<div class="bl-author-meta">
+					 <span>54 года</span><br/><span>На сайте с 28.12.2010</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/10809/" title="Александр Рудаков (stoyn)"><img src="/cache/a/7/5/a7dde-80-tw.jpg" width="80px" height="60px" alt="Александр Рудаков (stoyn)" /></a>
+					<div class="bl-text">Цепи на трубе?И брусья как-то не то.ШИНЫ.Да и в такой подвязке они провиснут и будут болтаться </div>					<div class="bl-meta"><a href="#comment924637">1 ноября 2016 года, 1:40</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-current-user bl-odd" id="comment924641">
+						<div class="bl-author"><a href="/community/user/22051/">Шура  (Miroag)</a>
+								<div class="bl-author-meta">
+					 <span>43 года</span><br/><span>На сайте с 06.10.2016</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/22051/" title="Шура  (Miroag)"><img src="/cache/d/9/a/948a1-80-tw.jpg" width="80px" height="80px" alt="Шура  (Miroag)" /></a>
+					<div class="bl-text"><span class="quote">Цитата:<br /> Образ буксира в стиле ВанГога получился.  Вот пожалуй и всё по модели. После 30ти летнего перерыва, неплохой результат. Руки помнят!</span><br />
+Спасибо</div>					<div class="bl-meta"><a href="#comment924641">1 ноября 2016 года, 1:53</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a> &middot; <a href="/community/user/22051/?edit=924641&MODEL=464829#comment924641">
+										Редактировать</a> &middot; <a
+								href="javascript:if(confirm('Вы действительно хотите удалить этот комментарий?\n\nДанное действие невозможно отменить!'))top.location.href='/community/user/22051/?del=924641&MODEL=464829';">Удалить</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-current-user bl-even" id="comment924642">
+						<div class="bl-author"><a href="/community/user/22051/">Шура  (Miroag)</a>
+								<div class="bl-author-meta">
+					 <span>43 года</span><br/><span>На сайте с 06.10.2016</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/22051/" title="Шура  (Miroag)"><img src="/cache/d/9/a/948a1-80-tw.jpg" width="80px" height="80px" alt="Шура  (Miroag)" /></a>
+					<div class="bl-text"><span class="quote">Цитата:<br />Так не плохо ,только вода,как то выглядит не совсем натурально .<br />
+Цвет не совсем тот.</span><br />
+Согласен. Цвет типа идеальной чистый, где то в открытом море, что для буксира не вариант. <br />
+Лучший вариант ... </div><div class="bl-files">Прикрепленные файлы:<br /><a href="/upload/comments/233/2016-01-08 14.03.30.jpg" rel="shadowbox[s924642]" target="_blank"><img src="/cache/9/9/8/78d42-200x130-normal-ftw.jpg" width="200px" height="130px" alt="" /></a></div>					<div class="bl-meta"><a href="#comment924642">1 ноября 2016 года, 1:58</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a> &middot; <a href="/community/user/22051/?edit=924642&MODEL=464829#comment924642">
+										Редактировать</a> &middot; <a
+								href="javascript:if(confirm('Вы действительно хотите удалить этот комментарий?\n\nДанное действие невозможно отменить!'))top.location.href='/community/user/22051/?del=924642&MODEL=464829';">Удалить</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-current-user bl-odd" id="comment924646">
+						<div class="bl-author"><a href="/community/user/22051/">Шура  (Miroag)</a>
+								<div class="bl-author-meta">
+					 <span>43 года</span><br/><span>На сайте с 06.10.2016</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/22051/" title="Шура  (Miroag)"><img src="/cache/d/9/a/948a1-80-tw.jpg" width="80px" height="80px" alt="Шура  (Miroag)" /></a>
+					<div class="bl-text"><span class="quote">Цитата:<br />Цепи на трубе?И брусья как-то не то.ШИНЫ.Да и в такой подвязке они провиснут и будут болтаться </span><br />
+Цепи согласен. Сделал по инструкции, но как то не то. По поводу шин точно так же думал. Но посмотри те ч.б. фотографию там именно что брусья. Или вот очень хорошо видно.</div><div class="bl-files">Прикрепленные файлы:<br /><a href="/upload/comments/134/tugboat-gladisfen-hudson-river-c-1900-vintage-photograph-a-gurmankin.jpg" rel="shadowbox[s924646]" target="_blank"><img src="/cache/3/d/b/ff5d4-200x130-normal-ftw.jpg" width="200px" height="130px" alt="" /></a></div>					<div class="bl-meta"><a href="#comment924646">1 ноября 2016 года, 2:03</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a> &middot; <a href="/community/user/22051/?edit=924646&MODEL=464829#comment924646">
+										Редактировать</a> &middot; <a
+								href="javascript:if(confirm('Вы действительно хотите удалить этот комментарий?\n\nДанное действие невозможно отменить!'))top.location.href='/community/user/22051/?del=924646&MODEL=464829';">Удалить</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-even" id="comment924651">
+						<div class="bl-author"><a href="/community/user/10809/">Александр Рудаков (stoyn)</a>
+								<div class="bl-author-meta">
+					 <span>54 года</span><br/><span>На сайте с 28.12.2010</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/10809/" title="Александр Рудаков (stoyn)"><img src="/cache/a/7/5/a7dde-80-tw.jpg" width="80px" height="60px" alt="Александр Рудаков (stoyn)" /></a>
+					<div class="bl-text"><span class="quote">Цитата:<br />Цитата:Цепи на трубе?И брусья как-то не то.ШИНЫ.Да и в такой подвязке они провиснут и будут болтаться <br />
+Цепи согласен. Сделал по инструкции, но как то не то. По поводу шин точно так же думал. Но посмотри те ч.б. фотографию там именно что брусья. Или вот очень хорошо видно.</span><br />
+возможно,чесно говоря плохо видно.Но привязаны по середине</div>					<div class="bl-meta"><a href="#comment924651">1 ноября 2016 года, 2:14</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-odd" id="comment924652">
+						<div class="bl-author"><a href="/community/user/10809/">Александр Рудаков (stoyn)</a>
+								<div class="bl-author-meta">
+					 <span>54 года</span><br/><span>На сайте с 28.12.2010</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/10809/" title="Александр Рудаков (stoyn)"><img src="/cache/a/7/5/a7dde-80-tw.jpg" width="80px" height="60px" alt="Александр Рудаков (stoyn)" /></a>
+					<div class="bl-text">По буксирам есть сказка,там очень много обсуждалось и фотографии различные.Посмотрите-интересно </div>					<div class="bl-meta"><a href="#comment924652">1 ноября 2016 года, 2:17</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-even" id="comment924679">
+						<div class="bl-author"><a href="/community/user/17875/">Андрей Ушаков (andri1979)</a>
+								<div class="bl-author-meta">
+					Омск<br /> <span>38 лет</span><br/><span>На сайте с 14.04.2014</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/17875/" title="Андрей Ушаков (andri1979)"><img src="/cache/6/7/5/9f187-80-tw.jpg" width="80px" height="60px" alt="Андрей Ушаков (andri1979)" /></a>
+					<div class="bl-text">Хороший буксирчик!</div>					<div class="bl-meta"><a href="#comment924679">1 ноября 2016 года, 8:56</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-odd" id="comment924718">
+						<div class="bl-author"><a href="/community/user/20371/">Старпом</a>
+								<div class="bl-author-meta">
+					Челябинск<br /> <span>66 лет</span><br/><span>На сайте с 21.08.2015</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/20371/" title="Старпом"><img src="/cache/a/9/b/55eef-80-tw.jpg" width="80px" height="112px" alt="Старпом" /></a>
+					<div class="bl-text">Ни коем образом не хочу обидеть Автора.<br />
+Но,  модель смотрится больше как сувенир.<br />
+Скорее всего это не масштабность отдельных деталей, ну и вода уж совсем не водяная какая-то.<br />
+ Скорее смахивает на бассейн, чем на водную поверхность. Сам выстрадал, не просто это, знаю. По этому и отмечаю. И еще не понял, по привальным брусьям, они, что так и закреплены за один конец? Почему второй не свисает, как на черно-белом фото?<br />
+Итог: Руки, что помнят, но нужна постоянная тренировка. Так держать. <br />
+Но пока только песчаная гавань. Соответственно и оценки.<br />
+С уважением, Старпом.</div>					<div class="bl-meta"><a href="#comment924718">1 ноября 2016 года, 12:31</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-even" id="comment924720">
+						<div class="bl-author"><a href="/community/user/11580/">Korvet</a>
+								<div class="bl-author-meta">
+					Челябинск<br /> <span>36 лет</span><br/><span>На сайте с 14.03.2011</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/11580/" title="Korvet"><img src="/cache/7/c/f/2f1ee-80-tw.jpg" width="80px" height="55px" alt="Korvet" /></a>
+					<div class="bl-text">Интересный буксирчик. Сильно напоминает модель буксира от Ревелл. <br />
+К уже прозвучавшим замечаниям добавлю:<br />
+- не хватает такелажа на мачте, ну не может мачта стоять сама по себе, на фотографии буксира видны стяжки которыми она крепится;<br />
+- масштаб модели большой, можно было бы насытить модель мелкими деталями: швабру с ведром поставить, ящики или что-то подобное;<br />
+- на крыше рубки стоит шлюпка и лежит лестница, и то и другое совсем ни как не закреплено, непорядок;<br />
+- не понравились большие щели в деревянной обшивке рубки. <br />
+      </div>					<div class="bl-meta"><a href="#comment924720">1 ноября 2016 года, 12:42</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-odd" id="comment924729">
+						<div class="bl-author"><a href="/community/user/19712/">Антон  Хотеев (Anton1969)</a>
+								<div class="bl-author-meta">
+					Минск<br /> <span>47 лет</span><br/><span>На сайте с 02.04.2015</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/19712/" title="Антон  Хотеев (Anton1969)"><img src="/cache/b/f/2/b558a-80-tw.jpg" width="80px" height="97.92px" alt="Антон  Хотеев (Anton1969)" /></a>
+					<div class="bl-text">Да не хватает мелочей однозначно, некоторые элементы немасштабны, такелаж просится. Бревнышки как-то странно подвязаны.  Вода получилась неубедительно. Прошу не обижаться, коллега, но пока "песок". <br />
+Тем не менее поздравляю Автора - после 30-летнего перерыва опять вернуться в моделизм дорогого стоит! Успеха Вам в последующих проектах, - уверен уровень будет выше.<br />
+С уважением, Антон<br />
+</div>					<div class="bl-meta"><a href="#comment924729">1 ноября 2016 года, 13:37</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-even" id="comment924730">
+						<div class="bl-author"><a href="/community/user/6940/">deLoro</a>
+								<div class="bl-author-meta">
+					 <span>52 года</span><br/><span>На сайте с 07.10.2007</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/6940/" title="deLoro"><img src="/upload/main/d/b/b/a/7/3/ 27728z1y.gif" width="80px" height="80px" alt="deLoro" /></a>
+					<div class="bl-text"><span class="quote">Цитата:<br />Цепи на трубе?И брусья как-то не то.ШИНЫ.Да и в такой подвязке они провиснут и будут болтаться </span><br />
+<br />
+Александр, для кранцев брёвна использовались постоянно, пока хим. промышленность не освоила производство шин в достаточном количестве для водного транспорта. )))<br />
+ Цепи велики, калибр нужен меньше, тогда бы и смотрелось живее.</div>					<div class="bl-meta"><a href="#comment924730">1 ноября 2016 года, 13:50</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-odd" id="comment924734">
+						<div class="bl-author"><a href="/community/user/13496/">Борис Волконский (Boris2005)</a>
+								<div class="bl-author-meta">
+					Акко<br /> <span>71 год</span><br/><span>На сайте с 01.02.2012</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/13496/" title="Борис Волконский (Boris2005)"><img src="/cache/4/4/5/5fa95-80-tw.jpg" width="80px" height="80px" alt="Борис Волконский (Boris2005)" /></a>
+					<div class="bl-text">Сувенирчик в виде модели.Или модель как сувенир.Карамельная покраска,ляпы непростительные,грубоватое исполнение.Но видно,что у автора -исполнителя есть куда стремиться.А пока может в диарамки?Хотя водичка тоже....хм.....</div>					<div class="bl-meta"><a href="#comment924734">1 ноября 2016 года, 14:25</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-even" id="comment924736">
+						<div class="bl-author"><a href="/community/user/8991/">jokker</a>
+								<div class="bl-author-meta">
+					Москва<br /> <span>46 лет</span><br/><span>На сайте с 04.08.2010</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/8991/" title="jokker"><img src="/cache/0/3/f/9f4c0-80-tw.jpg" width="80px" height="111.62790697674px" alt="jokker" /></a>
+					<div class="bl-text">Да,а цепи на трубах использовались очень редко,в большинстве случаев в качестве растяжек использовали тросы<br />
+Просто цепь не даёт той устойчивости по с равнению с тросами.<br />
+</div><div class="bl-files">Прикрепленные файлы:<br /><a href="/upload/comments/6ad/IMG_1348.JPG" rel="shadowbox[s924736]" target="_blank"><img src="/cache/9/b/9/61db8-200x130-normal-ftw.jpg" width="200px" height="130px" alt="" /></a></div>					<div class="bl-meta"><a href="#comment924736">1 ноября 2016 года, 14:37</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-odd" id="comment924737">
+						<div class="bl-author"><a href="/community/user/8991/">jokker</a>
+								<div class="bl-author-meta">
+					Москва<br /> <span>46 лет</span><br/><span>На сайте с 04.08.2010</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/8991/" title="jokker"><img src="/cache/0/3/f/9f4c0-80-tw.jpg" width="80px" height="111.62790697674px" alt="jokker" /></a>
+					<div class="bl-text">На счёт кранцев ( брёвнышки) привязаны они правильно просто наклон не много не тот , свободным концом их укладывали на привальный брус.<br />
+А,при швартовке их просто с него скидывали .</div><div class="bl-files">Прикрепленные файлы:<br /><a href="/upload/comments/971/IMG_1350.JPG" rel="shadowbox[s924737]" target="_blank"><img src="/cache/9/6/2/d7ed4-200x130-normal-ftw.jpg" width="200px" height="130px" alt="" /></a></div>					<div class="bl-meta"><a href="#comment924737">1 ноября 2016 года, 14:49</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-current-user bl-even" id="comment924961">
+						<div class="bl-author"><a href="/community/user/22051/">Шура  (Miroag)</a>
+								<div class="bl-author-meta">
+					 <span>43 года</span><br/><span>На сайте с 06.10.2016</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/22051/" title="Шура  (Miroag)"><img src="/cache/d/9/a/948a1-80-tw.jpg" width="80px" height="80px" alt="Шура  (Miroag)" /></a>
+					<div class="bl-text">Спасибо всем за дельные и полезные советы. Особенно понравилось про ведро и швабру. И просто и сочно. Будем стараться.</div>					<div class="bl-meta"><a href="#comment924961">2 ноября 2016 года, 17:01</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a> &middot; <a href="/community/user/22051/?edit=924961&MODEL=464829#comment924961">
+										Редактировать</a> &middot; <a
+								href="javascript:if(confirm('Вы действительно хотите удалить этот комментарий?\n\nДанное действие невозможно отменить!'))top.location.href='/community/user/22051/?del=924961&MODEL=464829';">Удалить</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-odd" id="comment925018">
+						<div class="bl-author"><a href="/community/user/8199/">Алексей Лежнев (ПиЛя)</a>
+				<b style="color:red">администратор</b>				<div class="bl-author-meta">
+					Город-Герой Москва, <br /> <span>63 года</span><br/><span>На сайте с 26.10.2009</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/8199/" title="Алексей Лежнев (ПиЛя)"><img src="/cache/0/c/e/5e7ec-80-tw.jpg" width="80px" height="106.66666666667px" alt="Алексей Лежнев (ПиЛя)" /></a>
+					<div class="bl-text">Возвращаю модель Автору в Личные.<br />
+<br />
+Рекомендую подать новую заявку для размещение модели в разделе Песочница.<br />
+<br />
+С Уважением, Алексей.</div>					<div class="bl-meta"><a href="#comment925018">2 ноября 2016 года, 20:33</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a></div>
+				</div>
+			</div>
+		</div>
+			<div class="bl-comment bl-current-user bl-even" id="comment925022">
+						<div class="bl-author"><a href="/community/user/22051/">Шура  (Miroag)</a>
+								<div class="bl-author-meta">
+					 <span>43 года</span><br/><span>На сайте с 06.10.2016</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/22051/" title="Шура  (Miroag)"><img src="/cache/d/9/a/948a1-80-tw.jpg" width="80px" height="80px" alt="Шура  (Miroag)" /></a>
+					<div class="bl-text"><span class="quote">Цитата:<br />Возвращаю модель Автору в Личные.<br />
+<br />
+Рекомендую подать новую заявку для размещение модели в разделе Песочница.<br />
+<br />
+С Уважением, Алексей.</span><br />
+Алексей, а не подскажите как подать заявку на песочницу? У меня в модели есть "Предложить к размещению в галерею", отключить коментарии,редактировать и удалить. Ничего по поводу песочницы найти не могу. Я собственно думал что после подачи заявки комиссия определяет конечную гавань. Или это делается совсем по другому? Заранее спасибо.</div>					<div class="bl-meta"><a href="#comment925022">2 ноября 2016 года, 20:56</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a> &middot; <a href="/community/user/22051/?edit=925022&MODEL=464829#comment925022">
+										Редактировать</a> &middot; <a
+								href="javascript:if(confirm('Вы действительно хотите удалить этот комментарий?\n\nДанное действие невозможно отменить!'))top.location.href='/community/user/22051/?del=925022&MODEL=464829';">Удалить</a></div>
+				</div>
+			</div>
+		</div>
+	<div id="lastComment"></div>		<div class="bl-comment bl-odd" id="comment925078">
+						<div class="bl-author"><a href="/community/user/8991/">jokker</a>
+								<div class="bl-author-meta">
+					Москва<br /> <span>46 лет</span><br/><span>На сайте с 04.08.2010</span>
+				</div>
+			</div>
+						<div class="bl-leftborder">
+				<div class="bl-content">
+					<a class="bl-avatar" href="/community/user/8991/" title="jokker"><img src="/cache/0/3/f/9f4c0-80-tw.jpg" width="80px" height="111.62790697674px" alt="jokker" /></a>
+					<div class="bl-text">Может все таки разместить этот буксир в раздел "Диорамы",как ни как не плохая виньетка получилась.<br />
+Вот если и там он не придется по душе народу тогда в песочницу.</div>					<div class="bl-meta"><a href="#comment925078">2 ноября 2016 года, 23:14</a> &middot; <a href="javascript:void(0);"
+																				   class="bl-cite">Цитировать</a></div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="bl-comment bl-pager bl-even">
+		<div class="bl-author"></div>
+		<div class="bl-leftborder">
+			<div class="bl-content">
+				<span class="forum-page-title">Страницы:</span>
+				 <span class="forum-page-first forum-page-current">1</span> <a href="/community/user/22051/?p=2&MODEL=464829#cmtlist">2</a> <a class="prevnext" href="/community/user/22051/?p=2&MODEL=464829#cmtlist">&rarr;</a></div>
+		</div></div>
+	<div id="bl-reply" class="bl-comment bl-last bl-odd">
+		<div class="bl-author">&nbsp;</div>
+		<div class="bl-leftborder">
+			<div class="bl-content">
+									<form method="post" enctype="multipart/form-data">
+						<input type="hidden" name="add" value="Y"/>
+						<input type="hidden" name="sessid" id="sessid" value="3d2d3549b31cfbd6a61aa8ac3e52cd89" />						<p style="margin:0 0 4px">Ваш комментарий к модели:</p>
+						<textarea style="width:100%;height:140px" name="text"></textarea>
+						<p>Прикрепить файл:<br><input type="file" name="attachment"/></p>
+						<p><input type="submit" value="  Добавить  " style="font-size:1.4em"/><span class="microloader"></span><input type="checkbox" id="cmtSub" value="464829" /><label for="cmtSub"> Информируйте меня о новых комментариях к этой модели</label></p>
+					</form>
+							</div>
+		</div>
+	</div>
+</div></div></div>
+<div id="bx_incl_area_5_3"></div></div></div>
+<div class="rightcol">
+<div id="bx_incl_area_6"><ul class="main_menu">
+	<li style="clear: both; margin-bottom: 8px"><a class="rc8" href="/help/"
+												   style="background-color:#a00; color: #ffd700">Помощь Каропке</a></li>
+	<li style="clear: both; margin-bottom: 8px"><a class="rc8" href="/forum/forum377/" style="background-color:#090">Всё
+			для&nbsp;вашего хобби</a></li>
+	<!--li style="clear: both; margin: -4px 0 8px"><a class="rc8" href="/forum/forum377/topic22467/"
+												   style="background-color:#049fef;color:#fff">Моделстрой</a></li-->
+
+	<li style="clear: both"><a class="rc8" href="/catalog/sale.php" style="background-color:#090">Магазин готовых
+			моделей</a></li>
+</ul>
+
+<ul class="main_menu">
+	<!--li style="clear: both"><a class="rc8 adm-link" href="/adm16/" style="background-image: url(/gfx/adm-bg.jpg);
+	background-position: -40px -40px; color: #000; text-shadow: 1px 1px 3px #0ff">Анонимные Деды Морозы 2016</a></li-->
+
+			<li class="x-left"><a class="rc8" href="/community/user/22051/">Моя страница</a></li>
+	<li class="x-right"><a class="rc8" href="/model/requests/view/" title="44 модели в прихожей">Прихожая (44)</a></li>
+	<li style="clear:both; padding-top: 18px">Обзоры:</li>
+	<li class="x-left"><a class="rc8" href="/catalog/reviews/">моделей</a></li>
+	<li class="x-right"><a class="rc8" href="/catalog/tools/">афтермаркет</a></li>
+	<li style="clear:both; font-size: 2px; margin-top: 6px">&nbsp;</li>
+		<li class="x-left"><a class="rc8" href="/catalog/errors/">Песочница</a></li>
+	<li class="x-right"><a class="rc8" href="/catalog/retro/">Ретро</a></li>
+	<li style="clear: both"><a class="rc8" href="/catalog/museums/">Музейные экспонаты</a></li>
+	<li style="clear: both"><a class="rc8" href="/catalog/garbage/">Бред воспалённого сознания</a></li>
+		<li style="clear: both"><a class="rc8" href="/v2/help.php"><span>&raquo;</span>Инструкция для пользователей</a></li>
+</ul>
+
+
+<div id="bx_incl_area_6_1"><ul class="articles-sections">
+	<li class="tll"><a href="/articles/1181/">Статьи</a></li>
+</ul></div>
+
+<ul class="main_menu submenu "><li><a class="rc8" href="">Живая лента</a></li><li><a class="rc8" href="/community/user/22051/">Работы</a></li><li><a class="rc8" href="/community/user/22051/photo/">Фото</a></li><li><a class="rc8" href="/community/user/22051/blog/">Сообщения</a></li><li><a class="rc8" href="/community/messages/">ЛС</a></li></ul><div style="clear:left"></div><div class="rc8" id="userinfo"><div class="username">Шура </div><a href="/community/user/22051/"><img src="/cache/d/9/a/948a1-250x200-normal-ftw.jpg" width="250px" height="200px" alt="Шура " /></a><div class="manage"><a href="/community/user/22051/edit/">Профиль</a> &middot; <a href="/community/user/22051/settings/">Настройки</a> &middot; <a href="/community/user/22051/features/">Функционал</a></div><dl><dt>Логин</dt><dd><noindex>Miroag</noindex></dd><dt>Д.Р.</dt><dd><noindex>6 апреля 1974 года</noindex></dd><dt>На&nbsp;сайте&nbsp;с</dt><dd>6 октября 2016 года</dd><dt></dt><dd><a href="/forum/user/22051/post/all/">Его сообщения на форуме</a></dd><dt></dt><dd><a href="/community/user-comments/?ID=22051">Его комментарии к моделям</a></dd></dl><h2><a href="/community/user/22051/friends/">Друзья (8)</a>:</h2><ul class="friends"><li><a href="/community/user/7915/"><img src="/cache/f/4/c/6a390-40x40-normal-ftw.jpg" width="40px" height="40px" alt="" /></a></li><li><a href="/community/user/8199/"><img src="/cache/0/c/e/5e7ec-40x40-normal-ftw.jpg" width="40px" height="40px" alt="Алексей" /></a></li><li><a href="/community/user/8991/"><img src="/cache/0/3/f/9f4c0-40x40-normal-ftw.jpg" width="40px" height="40px" alt="" /></a></li><li><a href="/community/user/12815/"><img src="/cache/e/f/1/d8c1a-40x40-normal-ftw.jpg" width="40px" height="40px" alt="Билли" /></a></li><li><a href="/community/user/13253/"><img src="/cache/f/2/3/3d587-40x40-normal-ftw.jpg" width="40px" height="40px" alt="Игорь" /></a></li><li><a href="/community/user/15848/"><img src="/cache/1/5/9/b6c49-40x40-normal-ftw.jpg" width="40px" height="40px" alt="Геннадий" /></a></li></ul><h2 style="clear:left"><a href="/community/user/22051/groups/">Группы (0)</a>:</h2><ul></ul><div style="margin-left: 16px"><a href="/community/user/22051/groups/create/">Создать новую группу</a></div><div id="bx_incl_area_5_3_1"></div><div style="clear:both"></div></div><div style="clear:both"></div>
+	<div id="bx_incl_area_6_2"><!--'start_frame_cache_2DJmFo'--><!--'end_frame_cache_2DJmFo'--></div><br/><br/>
+
+	<div id="bx_incl_area_6_3"><!--'start_frame_cache_ALOAcH'--><a href="/bitrix/rk.php?id=57&amp;site_id=s1&amp;event1=banner&amp;event2=click&amp;event3=1+%2F+%5B57%5D+%5B250x400%5D+J-Aircraft+250%C3%97400&amp;goto=http%3A%2F%2Fj-aircraftmodel.ru%2F&amp;af=3029d7168afb8f5aa2e30819a0d14b6a" target="_blank" ><img alt="«В небе над сакурой» — интернет-магазин сборных моделей" title="«В небе над сакурой» — интернет-магазин сборных моделей" src="/upload/rk/bb0/banner_karopka_2_250kh400.jpg" width="250" height="400" style="border:0;" /></a><!--'end_frame_cache_ALOAcH'--></div><br/><br/>
+
+	<div id="bx_incl_area_6_4"><!--'start_frame_cache_Zg1Ab0'--><!--'end_frame_cache_Zg1Ab0'--></div><div style="font-size: 0.8em; text-align: right; margin-bottom: 16px"><a
+		href="http://karopka.ru/ad.php?utm_source=leftblock&utm_medium=link&utm_campaign=advert">Реклама на Каропке</a>
+</div>
+
+	<div id="bx_incl_area_6_5"></div>
+	<a href="/personal/leftcol.php" class="x-rightcol"><u>Увести колонку вправо</u> &rarr;</a>
+<a href="/personal/chat.php" class="x-rightcol"><u>Не показывать чат</u></a>	<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?34"></script>
+	<script type="text/javascript">
+		VK.init({apiId: 2639713, onlyWidgets: true});
+	</script>
+	<div id="vk_comments" style="margin: 6px 0 0 -18px"></div>
+	<script>
+		VK.Widgets.Comments('vk_comments', {
+			limit: 16, width: 300, attach: '*', pageUrl: 'http://karopka.ru/index.php?disabled=2'
+		});
+	</script>	<table>
+		<tr>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+		</tr>
+	</table>
+</div>
+</div></div>
+<div style="position: absolute; top: -1000px; left: -100px; visibility:hidden">
+	<script type="text/javascript">(function(w, c) {
+			(w[c] = w[c] || []).push(function() {
+				try {
+					w.yaCounter59804 = new Ya.Metrika({id: 59804, enableAll: true, webvisor: true, type: 1});
+				} catch (e) { }
+			});
+		})(window, "yandex_metrika_callbacks");</script>
+	<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+	<noscript>
+		<div><img src="//mc.yandex.ru/watch/59804?cnt-class=1" style="position:absolute; left:-9999px;" alt=""/></div>
+	</noscript>
+
+	<script type="text/javascript"><!--
+		document.write("<a href='http://www.liveinternet.ru/click' " +
+			"target=_blank><img src='http://counter.yadro.ru/hit?t29.4;r" + escape(document.referrer) +
+			((typeof(screen) == "undefined") ? "" : ";s" + screen.width + "*" + screen.height + "*" +
+				(screen.colorDepth ? screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) + ";" +
+			Math.random() + "' alt='' title='' " + "border='0' width='0' height='0' style='margin-bottom: 16px'><\/a>")
+		//--></script>
+</div>
+
+<div>
+			<table width="100%">
+			<tr>				<td class="footer-bx" style="margin: 0 auto; width: 900px; text-align: center">
+					<div id="bx_incl_area_7"><!--'start_frame_cache_MoecjV'--><!--'end_frame_cache_MoecjV'--></div>				</td>
+								</td>
+			</tr>
+		</table>
+	</div>
+
+<div id="footer">
+	<div style="float: right; text-align: right">
+		<a href="#topPanel"><big>&uarr;</big> вверх</a>&nbsp; |&nbsp; <a href="/ad.php">Реклама на сайте</a>&nbsp; |&nbsp;
+		<a href="/feedback.php">Обратная
+			связь</a><br/>
+		Разработка: <a href="http://punksoft.ru">Панкисофт</a> | Время сервера: Fri, 08 Sep 2017 00:11:18 +0800	</div>
+	<div style="color:#fff">&copy; Каропка.ру &mdash; форум моделистов<br/>Все права защищены, сборки моделей
+		принадлежат их авторам
+	</div>
+</div>
+</div>
+</body>
+</html>
