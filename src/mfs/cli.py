@@ -45,6 +45,8 @@ def main(argv=sys.argv):
         scrape.karopka_forum(url, dest)
     elif url.startswith('http://www.navsource.narod.ru'):
         scrape.navsource(url, dest)
+    elif url.startswith('http://forums.airbase.ru'):
+        scrape.airbase_forum(url, dest)
     else:
         print ('Unrecognized url ...')
 
