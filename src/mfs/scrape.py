@@ -22,9 +22,10 @@ def download_images(dl):
             resolved_url = await resolve_image_link(url)
             if resolved_url:
                 async with session.get(resolved_url) as resp:
-                    with open(fn, 'wb') as f:
-                        # print('Downloaded file {}'.format(fn))
-                        f.write(await resp.read())
+                    if resp.status == 200:
+                        with open(fn, 'wb') as f:
+                            # print('Downloaded file {}'.format(fn))
+                            f.write(await resp.read())
 
     ioloop = asyncio.get_event_loop()
     tasks = [download_file(url, fn) for url, fn in dl]
@@ -45,6 +46,11 @@ async def resolve_image_link(url):
     # if url or hostname is empty - nothing to do
     if not url:
         return None
+
+    # if link points to an image, just return it back
+    if url.split('.')[-1] in ['jpg', 'jpeg', 'png', 'gif']:
+        return url
+
     o = urlp.urlparse(url)
     hn = o.hostname
     if not hn:
@@ -53,27 +59,31 @@ async def resolve_image_link(url):
     if len(o.path) < 3:
         return None
 
-    hn = hn.replace('www.', '')
+    # keep only last two parts of the hostname. eg www.radikal.ru => radikal.ru; radikal.ru => radikal.ru
+    hn = '.'.join(hn.split('.')[-2:])
+
     # bypass sites
     if hn in ['httpbin.org', 'karopka.ru']:
         return url
+
     # although following sites do contain images, we are not interested in them
     if hn in ['smayliki.ru', 'nick-name.ru']:
-        return None
-    if not hn in ['postimg.org', 'vfl.ru']:
-        print('{} is not supported or not an image site link'.format(url))
         return None
 
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as resp:
             text = await resp.text()
 
-    if hn == 'postimg.org':
+    if hn in ['postimg.org', 'postimage.org']:
         return _resolve_postimg(text)
-
     if hn == 'vfl.ru':
         return _resolve_vfl(text)
+    if hn == 'radikal.ru':
+        return _resolve_radikal(text)
+    if hn == 'keep4u.ru':
+        return _resolve_keep4u(text)
 
+    print('{} is not supported or not an image site link'.format(url))
     return None
 
 
@@ -85,6 +95,32 @@ def _resolve_postimg(text):
 def _resolve_vfl(text):
     soup = bs4.BeautifulSoup(text, 'html.parser')
     src = soup.find(id='f_image').find('img').get('src')
+
+    # vfl likes to return relative to protocol path, like //vfl.ru/ ...
+    if src.startswith('//'):
+        src = 'http:' + src
+    return src
+
+def _resolve_radikal(text):
+    soup = bs4.BeautifulSoup(text, 'html.parser')
+    e = soup.find('div', class_='mainBlock')
+    if not e:
+        return None
+
+    src = e.find('img').get('src')
+
+    # vfl likes to return relative to protocol path, like //vfl.ru/ ...
+    if src.startswith('//'):
+        src = 'http:' + src
+    return src
+
+def _resolve_keep4u(text):
+    soup = bs4.BeautifulSoup(text, 'html.parser')
+    e = soup.find(id ='image-viewer')
+    if not e:
+        return None
+
+    src = e.find('img').get('src')
 
     # vfl likes to return relative to protocol path, like //vfl.ru/ ...
     if src.startswith('//'):

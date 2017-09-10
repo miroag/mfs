@@ -28,7 +28,7 @@ def test_postimg(tmpdir):
     assert filecmp.cmp('./data/postimg.org.jpg', fn, shallow=False), 'Downloaded image does not match the reference one'
 
 def test_resolve_vfl():
-    url = url = scrape._resolve_vfl(_refdata('vfl.ru.html'))
+    url = scrape._resolve_vfl(_refdata('vfl.ru.html'))
     assert url=='http://images.vfl.ru/ii/1504336251/b2203fcd/18453338.jpg',\
         'Resolved vfl.ru image link does not match'
 
@@ -38,6 +38,44 @@ def test_vfl(tmpdir):
     scrape.download_images([('http://vfl.ru/fotos/b2203fcd18453338.html', fn)])
     assert len(os.listdir(tmpdir.strpath)) == 1, 'One images shall be downloaded'
     assert filecmp.cmp('./data/vfl.ru.jpg', fn, shallow=False), 'Downloaded image does not match the reference one'
+
+def test_resolve_radikal():
+    url = scrape._resolve_radikal(_refdata('radikal.ru.html'))
+    assert url=='http://s39.radikal.ru/i084/1106/a9/e1fca250702b.jpg',\
+        'Resolved radikal.ru image link does not match'
+
+
+def test_radikal(tmpdir):
+    fn = tmpdir.strpath + '/aaa.jpg'
+    scrape.download_images([('http://radikal.ru/F/s39.radikal.ru/i084/1106/a9/e1fca250702b.jpg.html', fn)])
+    assert len(os.listdir(tmpdir.strpath)) == 1, 'One images shall be downloaded'
+    assert filecmp.cmp('./data/radikal.ru.jpg', fn, shallow=False), 'Downloaded image does not match the reference one'
+
+def test_radikal_direct_link(tmpdir):
+    fn = tmpdir.strpath + '/aaa.jpg'
+    scrape.download_images([('http://s39.radikal.ru/i084/1106/a9/e1fca250702b.jpg', fn)])
+    assert len(os.listdir(tmpdir.strpath)) == 1, 'One images shall be downloaded'
+    assert filecmp.cmp('./data/radikal.ru.jpg', fn, shallow=False), 'Downloaded image does not match the reference one'
+
+
+def test_radikal_dead_link(tmpdir):
+    fn = tmpdir.strpath + '/aaa.jpg'
+    scrape.download_images([('http://radikal.ru/F/i038.radikal.ru/1102/a4/823b89d487dd.jpg.html', fn)])
+    assert len(os.listdir(tmpdir.strpath)) == 0, 'No images shall be downloaded'
+
+def test_resolve_keep4u():
+    url = scrape._resolve_keep4u(_refdata('keep4u.ru.html'))
+    assert url=='http://static2.keep4u.ru/2011/05/13/486422e15f82de157a64237a9627892e.jpg',\
+        'Resolved radikal.ru image link does not match'
+
+
+def test_keep4u(tmpdir):
+    fn = tmpdir.strpath + '/aaa.jpg'
+    scrape.download_images([('http://keep4u.ru/full/486422e15f82de157a64237a9627892e.html', fn)])
+    assert len(os.listdir(tmpdir.strpath)) == 1, 'One images shall be downloaded'
+    assert filecmp.cmp('./data/keep4u.ru.jpg', fn, shallow=False), 'Downloaded image does not match the reference one'
+
+
 
 @pytest.fixture
 def mock_image_download(monkeypatch):
