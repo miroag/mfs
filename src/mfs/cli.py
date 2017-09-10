@@ -12,6 +12,7 @@ Arguments:
 Supported locations are:
 http://karopka.ru/community/user/
 http://karopka.ru/forum/
+http://www.navsource.narod.ru/
 
 Options:
   -h --help                                      Show this screen.
@@ -42,6 +43,8 @@ def main(argv=sys.argv):
     elif url.startswith('http://karopka.ru/forum/'):
         # Scrape karopka forum. URL starts from http://karopka.ru/forum/
         scrape.karopka_forum(url, dest)
+    elif url.startswith('http://www.navsource.narod.ru'):
+        scrape.navsource(url, dest)
     else:
         print ('Unrecognized url ...')
 

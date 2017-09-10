@@ -1,7 +1,6 @@
 import bs4
 import requests
 import urllib.parse as urlp
-import sys
 import aiohttp
 import asyncio
 import tqdm
@@ -94,8 +93,11 @@ def _resolve_postimg(text):
 
 def _resolve_vfl(text):
     soup = bs4.BeautifulSoup(text, 'html.parser')
-    src = soup.find(id='f_image').find('img').get('src')
+    e = soup.find(id='f_image')
+    if not e:
+        return None
 
+    src = e.find('img').get('src')
     # vfl likes to return relative to protocol path, like //vfl.ru/ ...
     if src.startswith('//'):
         src = 'http:' + src
@@ -222,5 +224,41 @@ def karopka_forum(url, dest, follow=True):
         return dl
 
     dl = _karopka_forum(url=url, dest=dest, follow=follow)
+    download_images(dl)
+    return dl
+
+def navsource(url, dest):
+    """
+    Scrape photos from http://www.navsource.narod.ru/ source
+    Args:
+        url:
+        dest:
+
+    Returns:
+
+    """
+    dl = []
+    urlparts = url.split('/')
+
+    r = requests.get(url=url)
+    r.raise_for_status()
+    soup = bs4.BeautifulSoup(r.text, 'html.parser')
+
+    for row in soup.find_all('tr'):
+        # while there are many tables numbering is going through tables - use it
+        tds = row.find_all('td')
+        if len(tds)<4:
+            continue
+
+        i = int(tds[0].text.strip().replace('.',''))
+
+        urlparts[-1] = tds[1].find('a').get('href')
+        src = '/'.join(urlparts)
+        des = tds[3].text.replace('(подробнее)', '').strip()
+        des = ''.join([c for c in des if c.isalpha() or c.isdigit() or c==' ']).rstrip()
+
+        dl.append((src, '{}/navsource-{:04d} - {}.jpg'.format(dest, i, des)))
+
+    print('Found {} images'.format(len(dl)))
     download_images(dl)
     return dl

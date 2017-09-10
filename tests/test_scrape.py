@@ -108,3 +108,7 @@ def test_download_images(tmpdir):
     dl = [('http://httpbin.org/image/jpeg', '{}/{:02d}.jpg'.format(tmpdir, i)) for i in range(nfiles)]
     scrape.download_images(dl)
     assert len(os.listdir(tmpdir.strpath)) == nfiles, 'Wrong number of files'
+
+def test_navsource(tmpdir, mock_image_download):
+    dl = scrape.navsource('http://www.navsource.narod.ru/photos/02/020/index.html', tmpdir)
+    assert len(dl) == 56, 'Wrong number of links'
