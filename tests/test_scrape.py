@@ -138,9 +138,18 @@ def test_download_images(tmpdir):
     assert len(os.listdir(tmpdir.strpath)) == nfiles, 'Wrong number of files'
 
 
-def test_download_images_no_site(tmpdir):
+def test_download_images_bad_links(tmpdir):
+    # wrong encoding ?
+    dl = [('http://www.wrk.ru/forums/attachment.php?item=83381', '{}/aaa.jpg'.format(tmpdir))]
+    scrape.download_images(dl)
+    assert len(os.listdir(tmpdir.strpath)) == 0, 'No files shall be downloaded and no exception'
+
+    # no site
     dl = [(
           'http://www.suveniri-knigi.ru/index.php?nach=1&kol=1&book2=CHertezi_korabley_CHertez_kreysera_I_ranga_Varyag_masshta&book22=&kcena=220&kkorzina=3521',
           '{}/aaa.jpg'.format(tmpdir))]
     scrape.download_images(dl)
     assert len(os.listdir(tmpdir.strpath)) == 0, 'No files shall be downloaded and no exception'
+
+
+

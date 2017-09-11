@@ -5,9 +5,21 @@ import aiohttp
 import asyncio
 import tqdm
 import dateutil.parser
-import chardet
 
 _KAROPKA = 'http://karopka.ru'
+
+
+def _n(src):
+    if src.startswith('//'):
+        src = 'http:' + src
+    return src
+
+
+def _sluggify(text):
+    if not text:
+        return ''
+    return ''.join([c for c in text if c.isalpha() or c.isdigit() or c in [' ', '.', '_', '-']]).rstrip()
+
 
 def download_images(dl):
     # avoid to many requests(coroutines) the same time.
@@ -68,12 +80,15 @@ async def resolve_image_link(url):
         return url
 
     # although following sites do contain images, we are not interested in them
-    if hn in ['smayliki.ru', 'nick-name.ru', 'suveniri-knigi.ru', 'narod.ru']:
+    if hn in ['smayliki.ru', 'nick-name.ru', 'suveniri-knigi.ru', 'narod.ru', 'wrk.ru']:
         return None
 
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as resp:
-            text = await resp.text()
+            if resp.status == 200:
+                text = await resp.text()
+            else:
+                print('{} returned {}'.format(url, resp.status))
 
     if hn in ['postimg.org', 'postimage.org']:
         return _resolve_postimg(text)
@@ -93,17 +108,15 @@ def _resolve_postimg(text):
     src = soup.find(id='main-image').get('src')
     return src
 
+
 def _resolve_vfl(text):
     soup = bs4.BeautifulSoup(text, 'html.parser')
     e = soup.find(id='f_image')
     if not e:
         return None
 
-    src = e.find('img').get('src')
-    # vfl likes to return relative to protocol path, like //vfl.ru/ ...
-    if src.startswith('//'):
-        src = 'http:' + src
-    return src
+    return _n(e.find('img').get('src'))
+
 
 def _resolve_radikal(text):
     soup = bs4.BeautifulSoup(text, 'html.parser')
@@ -111,23 +124,16 @@ def _resolve_radikal(text):
     if not e:
         return None
 
-    src = e.find('img').get('src')
+    return _n(e.find('img').get('src'))
 
-    # vfl likes to return relative to protocol path, like //vfl.ru/ ...
-    if src.startswith('//'):
-        src = 'http:' + src
-    return src
 
 def _resolve_keep4u(text):
     soup = bs4.BeautifulSoup(text, 'html.parser')
-    e = soup.find(id ='image-viewer')
+    e = soup.find(id='image-viewer')
     if not e:
         return None
 
-    src = e.find('img').get('src')
-    if src.startswith('//'):
-        src = 'http:' + src
-    return src
+    return _n(e.find('img').get('src'))
 
 
 def karopka_model_overview(url, dest):
@@ -150,7 +156,7 @@ def karopka_model_overview(url, dest):
     # prepare the list of images to download. Original (not rescaled) images apparently stored in data-full attribute
     dl = []
     for i, img in enumerate(imgs, 1):
-        dl.append((_KAROPKA+img.get('data-full'), '{}/{:04d}.jpg'.format(dest, i)))
+        dl.append((_KAROPKA + img.get('data-full'), '{}/{:04d}.jpg'.format(dest, i)))
 
     print('Found {} images'.format(len(dl)))
     download_images(dl)
@@ -164,6 +170,7 @@ def karopka_forum(url, dest, follow=True):
     :param dest:
     :return:
     """
+
     def _karopka_forum(url, dest, follow=True):
         # list of images to download
         dl = []
@@ -197,7 +204,7 @@ def karopka_forum(url, dest, follow=True):
             for i, attachment in enumerate(attachments, 1):
                 # print('Attachment #{}'.format(i))
                 a = attachment.find('a', class_='forum-file')
-                url = _KAROPKA+a.get('href')
+                url = _KAROPKA + a.get('href')
                 fn = a.find('span').get_text()
                 fn = '{}/karopka{:04d}-a{:02d}-{}'.format(dest, postnr, i, fn)
                 dl.append((url, fn))
@@ -212,14 +219,13 @@ def karopka_forum(url, dest, follow=True):
                         fn = '{}/karopka{:04d}-l{:02d}.jpg'.format(dest, postnr, i)
                         dl.append((url, fn))
 
-
         print('Found {} potential image links'.format(len(dl)))
 
         if follow:
             print('Checking if next page is available ... ')
             next_page = soup.find('a', class_='forum-page-next')
             if next_page:
-                dl += _karopka_forum(_KAROPKA+next_page.get('href'), dest)
+                dl += _karopka_forum(_KAROPKA + next_page.get('href'), dest)
 
         return dl
 
@@ -227,8 +233,6 @@ def karopka_forum(url, dest, follow=True):
     download_images(dl)
     return dl
 
-def _sluggify(text):
-    return ''.join([c for c in text if c.isalpha() or c.isdigit() or c in [' ', '.', '_', '-']]).rstrip()
 
 def navsource(url, dest):
     """
@@ -250,10 +254,10 @@ def navsource(url, dest):
     for row in soup.find_all('tr'):
         # while there are many tables numbering is going through tables - use it
         tds = row.find_all('td')
-        if len(tds)<4:
+        if len(tds) < 4:
             continue
 
-        i = int(tds[0].text.strip().replace('.',''))
+        i = int(tds[0].text.strip().replace('.', ''))
 
         urlparts[-1] = tds[1].find('a').get('href')
         src = '/'.join(urlparts)
@@ -265,6 +269,7 @@ def navsource(url, dest):
     download_images(dl)
     return dl
 
+
 def airbase_forum(url, dest, follow=True):
     """
     Scrape airbase.ru forum. URL starts from http://forums.airbase.ru
@@ -272,6 +277,7 @@ def airbase_forum(url, dest, follow=True):
     :param dest:
     :return:
     """
+
     def _airbase_forum(url, dest, follow=True):
         # list of images to download
         dl = []
@@ -293,7 +299,7 @@ def airbase_forum(url, dest, follow=True):
             if not e:
                 continue
 
-            postnr =e.find('a').text
+            postnr = e.find('a').text
             # post date is in form: "#12.07.2009 12:33" - normalize to allow good sorting order
             dt = dateutil.parser.parse(postnr.strip().replace('#', ''))
             postnr = dt.strftime('airbase%Y-%m-%d-%H%M')
@@ -305,9 +311,7 @@ def airbase_forum(url, dest, follow=True):
                 # print('Attachment #{}'.format(i))
                 # there are two links in each attachment - first gives the image second description
                 a = attachment.find('a')
-                src = a.get('href')
-                if src.startswith('//'):
-                    src = 'http:' + src
+                src = _n(a.get('href'))
                 # description looks like rubbish for russian text - encoding issues ....
                 des = _sluggify(a.get('title'))
                 fn = '{}/{}-a{:02d}-{}'.format(dest, postnr, i, des)
@@ -337,7 +341,6 @@ def airbase_forum(url, dest, follow=True):
                             fn = '{}/{}-l{:02d}.jpg'.format(dest, postnr, i)
                             dl.append((src, fn))
 
-
         print('Found {} potential image links'.format(len(dl)))
 
         if follow:
@@ -346,7 +349,7 @@ def airbase_forum(url, dest, follow=True):
             if next_page:
                 src = next_page.get('href')
                 if src:
-                    dl += _airbase_forum('http:'+src, dest)
+                    dl += _airbase_forum(_n(src), dest, follow)
 
         return dl
 
