@@ -4,10 +4,10 @@ import urllib.parse as urlp
 import aiohttp
 import asyncio
 import tqdm
-import dateutil.parser
+import datetime
+# import dateutil.parser
 
 _KAROPKA = 'http://karopka.ru'
-
 
 def _n(src):
     if src.startswith('//'):
@@ -31,14 +31,19 @@ def download_images(dl):
             await f
 
     async def download_file(url, fn):
-        async with _sema, aiohttp.ClientSession() as session:
-            resolved_url = await resolve_image_link(url)
-            if resolved_url:
-                async with session.get(resolved_url) as resp:
-                    if resp.status == 200:
-                        with open(fn, 'wb') as f:
-                            # print('Downloaded file {}'.format(fn))
-                            f.write(await resp.read())
+        try:
+            async with _sema, aiohttp.ClientSession() as session:
+                resolved_url = await resolve_image_link(url)
+                if resolved_url:
+                    async with session.get(resolved_url) as resp:
+                        if resp.status == 200:
+                            with open(fn, 'wb') as f:
+                                # print('Downloaded file {}'.format(fn))
+                                f.write(await resp.read())
+        except Exception:
+            print('Download of {} failed'.format(url))
+
+
 
     ioloop = asyncio.get_event_loop()
     tasks = [download_file(url, fn) for url, fn in dl]
@@ -80,7 +85,7 @@ async def resolve_image_link(url):
         return url
 
     # although following sites do contain images, we are not interested in them
-    if hn in ['smayliki.ru', 'nick-name.ru', 'suveniri-knigi.ru', 'narod.ru', 'wrk.ru']:
+    if hn in ['smayliki.ru', 'nick-name.ru', 'suveniri-knigi.ru', 'narod.ru', 'wrk.ru', 'aceboard.net']:
         return None
 
     async with aiohttp.ClientSession() as session:
@@ -301,7 +306,8 @@ def airbase_forum(url, dest, follow=True):
 
             postnr = e.find('a').text
             # post date is in form: "#12.07.2009 12:33" - normalize to allow good sorting order
-            dt = dateutil.parser.parse(postnr.strip().replace('#', ''))
+            dt = datetime.datetime.strptime(postnr.strip().replace('#', ''), '%d.%m.%Y %H:%M')
+            # dt = dateutil.parser.parse(postnr.strip().replace('#', ''))
             postnr = dt.strftime('airbase%Y-%m-%d-%H%M')
             # print(postnr)
 
