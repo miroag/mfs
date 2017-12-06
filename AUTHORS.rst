@@ -2,4 +2,4 @@
 Authors
 =======
 
-* Alexandre Ovtchinnikov - http://miroag.com
+* Alexandre (Shura) Ovtchinnikov - http://miroag.com

@@ -2,8 +2,7 @@
 Contributing
 ============
 
-Contributions are welcome, and they are greatly appreciated! Every
-little bit helps, and credit will always be given.
+Contributions are welcome, and they are greatly appreciated! Every little bit helps, and credit will always be given.
 
 Bug reports
 ===========
@@ -17,9 +16,8 @@ When `reporting a bug <https://github.com/miroag/mfs/issues>`_ please include:
 Documentation improvements
 ==========================
 
-mfs could always use more documentation, whether as part of the
-official mfs docs, in docstrings, or even on the web in blog posts,
-articles, and such.
+mfs could always use more documentation, whether as part of the official mfs docs, in docstrings,
+or even on the web in blog posts, articles, and such.
 
 Feature requests and feedback
 =============================
@@ -42,6 +40,11 @@ To set up `mfs` for local development:
 2. Clone your fork locally::
 
     git clone git@github.com:your_name_here/mfs.git
+
+3. Install package locally (for editing)
+    Run command from clone location and note the '.' at the end of the command line to denote the current folder::
+
+    pip install --editable .
 
 3. Create a branch for local development::
 
@@ -88,3 +91,4 @@ To run a subset of tests::
 To run all the test environments in *parallel* (you need to ``pip install detox``)::
 
     detox
+

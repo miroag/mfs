@@ -1,8 +1,7 @@
 """
     Model Forums Scraper (mfs)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~
-    mfs is a set of utilities to ease scraping images from some Russian sites related to modelling
-
+    mfs - набор утилит для скачивания картинок с русских модельных форумов
 
 Usage:
   mfs URL [-n][-d DESTINATION]

@@ -59,7 +59,7 @@ Overview
 
 .. end-badges
 
-mfs is a set of utilities to ease image download from some Russian modelling forums
+mfs - набор утилит для скачивания картинок с русских модельных форумов
 
 * Free software: MIT license
 
