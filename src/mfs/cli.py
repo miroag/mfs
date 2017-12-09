@@ -50,7 +50,7 @@ def main(argv=sys.argv):
     elif url.startswith('http://forums.airbase.ru'):
         scrape.airbase_forum(url, dest, follow)
     else:
-        print ('Unrecognized url ...')
+        print('Unrecognized url ...')
 
     print('Done')
 
