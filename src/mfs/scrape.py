@@ -5,9 +5,11 @@ import aiohttp
 import asyncio
 import tqdm
 import datetime
+
 # import dateutil.parser
 
 _KAROPKA = 'http://karopka.ru'
+
 
 def _n(src):
     if src.startswith('//'):
@@ -42,8 +44,6 @@ def download_images(dl):
                                 f.write(await resp.read())
         except Exception:
             print('Download of {} failed'.format(url))
-
-
 
     ioloop = asyncio.get_event_loop()
     tasks = [download_file(url, fn) for url, fn in dl]

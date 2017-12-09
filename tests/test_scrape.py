@@ -6,14 +6,15 @@ import os
 import pytest
 import filecmp
 
-import src.mfs.scrape as scrape
-import mfs.cli as cli
+import mfs.scrape as scrape
 
-REFDATA = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data')
+
+def _reffn(fn):
+    return os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data', fn)
 
 
 def _refdata(fn):
-    with open('./data/{}'.format(fn), encoding='utf8') as f:
+    with open(_reffn(fn), encoding='utf8') as f:
         return f.read()
 
 
@@ -27,7 +28,8 @@ def test_postimg(tmpdir):
     fn = tmpdir.strpath + '/aaa.jpg'
     scrape.download_images([('http://www.postimg.org/image/n467ovtd9/', fn)])
     assert len(os.listdir(tmpdir.strpath)) == 1, 'One images shall be downloaded'
-    assert filecmp.cmp('./data/postimg.org.jpg', fn, shallow=False), 'Downloaded image does not match the reference one'
+    assert filecmp.cmp(_reffn('postimg.org.jpg'), fn,
+                       shallow=False), 'Downloaded image does not match the reference one'
 
 
 def test_resolve_vfl():
@@ -40,7 +42,7 @@ def test_vfl(tmpdir):
     fn = tmpdir.strpath + '/aaa.jpg'
     scrape.download_images([('http://vfl.ru/fotos/b2203fcd18453338.html', fn)])
     assert len(os.listdir(tmpdir.strpath)) == 1, 'One images shall be downloaded'
-    assert filecmp.cmp('./data/vfl.ru.jpg', fn, shallow=False), 'Downloaded image does not match the reference one'
+    assert filecmp.cmp(_reffn('vfl.ru.jpg'), fn, shallow=False), 'Downloaded image does not match the reference one'
 
 
 def test_resolve_radikal():
@@ -53,14 +55,14 @@ def test_radikal(tmpdir):
     fn = tmpdir.strpath + '/aaa.jpg'
     scrape.download_images([('http://radikal.ru/F/s39.radikal.ru/i084/1106/a9/e1fca250702b.jpg.html', fn)])
     assert len(os.listdir(tmpdir.strpath)) == 1, 'One images shall be downloaded'
-    assert filecmp.cmp('./data/radikal.ru.jpg', fn, shallow=False), 'Downloaded image does not match the reference one'
+    assert filecmp.cmp(_reffn('radikal.ru.jpg'), fn, shallow=False), 'Downloaded image does not match the reference one'
 
 
 def test_radikal_direct_link(tmpdir):
     fn = tmpdir.strpath + '/aaa.jpg'
     scrape.download_images([('http://s39.radikal.ru/i084/1106/a9/e1fca250702b.jpg', fn)])
     assert len(os.listdir(tmpdir.strpath)) == 1, 'One images shall be downloaded'
-    assert filecmp.cmp('./data/radikal.ru.jpg', fn, shallow=False), 'Downloaded image does not match the reference one'
+    assert filecmp.cmp(_reffn('radikal.ru.jpg'), fn, shallow=False), 'Downloaded image does not match the reference one'
 
 
 def test_radikal_dead_link(tmpdir):
@@ -79,7 +81,7 @@ def test_keep4u(tmpdir):
     fn = tmpdir.strpath + '/aaa.jpg'
     scrape.download_images([('http://keep4u.ru/full/486422e15f82de157a64237a9627892e.html', fn)])
     assert len(os.listdir(tmpdir.strpath)) == 1, 'One images shall be downloaded'
-    assert filecmp.cmp('./data/keep4u.ru.jpg', fn, shallow=False), 'Downloaded image does not match the reference one'
+    assert filecmp.cmp(_reffn('keep4u.ru.jpg'), fn, shallow=False), 'Downloaded image does not match the reference one'
 
 
 @pytest.fixture
@@ -146,10 +148,7 @@ def test_download_images_bad_links(tmpdir):
 
     # no site
     dl = [(
-          'http://www.suveniri-knigi.ru/index.php?nach=1&kol=1&book2=CHertezi_korabley_CHertez_kreysera_I_ranga_Varyag_masshta&book22=&kcena=220&kkorzina=3521',
-          '{}/aaa.jpg'.format(tmpdir))]
+        'http://www.suveniri-knigi.ru/index.php?nach=1&kol=1&book2=CHertezi_korabley_CHertez_kreysera_I_ranga_Varyag_masshta&book22=&kcena=220&kkorzina=3521',
+        '{}/aaa.jpg'.format(tmpdir))]
     scrape.download_images(dl)
     assert len(os.listdir(tmpdir.strpath)) == 0, 'No files shall be downloaded and no exception'
-
-
-

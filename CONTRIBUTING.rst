@@ -35,34 +35,41 @@ Development
 
 To set up `mfs` for local development:
 
-1. Fork `mfs <https://github.com/miroag/mfs>`_
-   (look for the "Fork" button).
-2. Clone your fork locally::
+1.  Fork `mfs <https://github.com/miroag/mfs>`_ (look for the "Fork" button).
+2.  Clone your fork locally::
 
-    git clone git@github.com:your_name_here/mfs.git
+        git clone git@github.com:your_name_here/mfs.git
 
-3. Install package locally (for editing)
-    Run command from clone location and note the '.' at the end of the command line to denote the current folder::
+3.  Install package locally (for editing).
+    Run following command from clone location. Note the '.' at the end of the command line to denote the current folder::
 
-    pip install --editable .
+        pip install --editable .
 
-3. Create a branch for local development::
+4.  Create a branch for local development::
 
-    git checkout -b name-of-your-bugfix-or-feature
+        git checkout -b name-of-your-bugfix-or-feature
 
    Now you can make your changes locally.
 
-4. When you're done making changes, run all the checks, doc builder and spell checker with `tox <http://tox.readthedocs.io/en/latest/install.html>`_ one command::
+5.  When you're done making changes, run all the checks, doc builder and spell checker with
+    `tox <http://tox.readthedocs.io/en/latest/install.html>`_ one command (you need to ``pip install tox`` first)::
 
-    tox
+        tox
 
-5. Commit your changes and push your branch to GitHub::
+   You would also need to have python environments for tox to operate. For anaconda based distribution, install them like::
 
-    git add .
-    git commit -m "Your detailed description of your changes."
-    git push origin name-of-your-bugfix-or-feature
+        conda create -y -p C:\python35 python=3.5
+        conda create -y -p C:\python36 python=3.6
 
-6. Submit a pull request through the GitHub website.
+   see `Stackoverflow article <https://stackoverflow.com/questions/30555943/is-it-possible-to-use-tox-with-conda-based-python-installations>`_ for some extra info
+
+6.  Commit your changes and push your branch to GitHub::
+
+        git add .
+        git commit -m "Your detailed description of your changes."
+        git push origin name-of-your-bugfix-or-feature
+
+7.  Submit a pull request through the GitHub website.
 
 Pull Request Guidelines
 -----------------------
