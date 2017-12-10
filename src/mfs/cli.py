@@ -25,7 +25,7 @@ import sys
 
 from docopt import docopt
 
-from mfs.karopka import KaropkaModelOverviewScraper
+from mfs.karopka import KaropkaModelScraper, KaropkaForumScraper
 
 
 def main(argv=sys.argv):
@@ -42,10 +42,10 @@ def main(argv=sys.argv):
     # karopka model overview ?
     # m = re.match('^http://karopka.ru/community/user/(.*)/\?MODEL=(.*)$', url)
     if url.startswith('http://karopka.ru/community/user/'):
-        scraper = KaropkaModelOverviewScraper()
+        scraper = KaropkaModelScraper()
     elif url.startswith('http://karopka.ru/forum/'):
         # Scrape karopka forum. URL starts from http://karopka.ru/forum/
-        scrape.karopka_forum(url, dest, follow)
+        scraper = KaropkaForumScraper()
     elif url.startswith('http://www.navsource.narod.ru'):
         scrape.navsource(url, dest)
     elif url.startswith('http://forums.airbase.ru'):

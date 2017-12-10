@@ -1,3 +1,6 @@
+import bs4
+import requests
+
 
 def n(src):
     """
@@ -19,4 +22,18 @@ def sluggify(text):
     """
     if not text:
         return ''
-    return ''.join([c for c in text if c.isalpha() or c.isdigit() or c in [' ', '.', '_', '-', '=']]).rstrip()
+    data = ''.join([c for c in text if c.isalpha() or c.isdigit() or c in [' ', '.', ',' , '_', '-', '=']]).rstrip()
+    truncated = data[:75] if len(data) > 75 else data
+    return truncated
+
+
+def soup(url):
+    """
+    Simple wrapper to BeautifulSoup object from url
+    :param url:
+    :return: BeautifulSoup
+    """
+
+    r = requests.get(url=url)
+    r.raise_for_status()
+    return bs4.BeautifulSoup(r.text, 'html.parser')
