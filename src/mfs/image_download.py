@@ -3,11 +3,8 @@ import urllib.parse as urlp
 import aiohttp
 import asyncio
 import tqdm
-import requests
-import os
 
 import mfs.util as util
-
 
 
 def download_images(dl):
@@ -42,9 +39,8 @@ def download_images(dl):
 
 async def resolve_image_link(url):
     """
-    Resolves provided link to an image upload site to direct image link
-    :param url:
-    :param fn:
+    Resolves link to direct image link, from image upload site specific format
+    :param url: Link to (potentially) images upload site
     :return: None if location not supported, or direct download link
     """
 
@@ -81,6 +77,7 @@ async def resolve_image_link(url):
                 text = await resp.text()
             else:
                 print('{} returned {}'.format(url, resp.status))
+                return None
 
     if hn in ['postimg.org', 'postimage.org']:
         return _resolve_postimg(text)
@@ -107,7 +104,7 @@ def _resolve_vfl(text):
     if not e:
         return None
 
-    return _n(e.find('img').get('src'))
+    return util.n(e.find('img').get('src'))
 
 
 def _resolve_radikal(text):
@@ -116,7 +113,7 @@ def _resolve_radikal(text):
     if not e:
         return None
 
-    return _n(e.find('img').get('src'))
+    return util.n(e.find('img').get('src'))
 
 
 def _resolve_keep4u(text):
@@ -125,4 +122,4 @@ def _resolve_keep4u(text):
     if not e:
         return None
 
-    return _n(e.find('img').get('src'))
+    return util.n(e.find('img').get('src'))
