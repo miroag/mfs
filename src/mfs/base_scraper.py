@@ -14,8 +14,8 @@ class BaseScraper:
         self.url = None
         self.dl = []
 
-    def scan(self, url, follow):
-        pass
+    def scan(self, url, follow=True):
+        raise NotImplementedError("Should have implemented this")
 
     def save(self, dest, use_title=True):
         """

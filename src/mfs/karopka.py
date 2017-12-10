@@ -11,32 +11,23 @@ class KaropkaModelOverviewScraper(BaseScraper):
     Scrape karopka model overview. URL is in the form of http://karopka.ru/community/user/<user_id>/?MODEL=<model_id>
     """
 
-    def scan(self, url, follow):
-        pass
+    def scan(self, url, follow=True):
+        if not url.startswith('http://karopka.ru/community/'):
+            raise AttributeError('URL shall start from http://karopka.ru/community/')
 
+        self.dl = []
 
-def karopka_model_overview(url, dest):
-    """
-    Scrape karopka model overview. URL is in the form of http://karopka.ru/community/user/<user_id>/?MODEL=<model_id>
-    :param url:
-    :param dest:
-    :return:
-    """
-    r = requests.get(url=url)
-    r.raise_for_status()
-    soup = bs4.BeautifulSoup(r.text, 'html.parser')
+        r = requests.get(url=url)
+        r.raise_for_status()
+        soup = bs4.BeautifulSoup(r.text, 'html.parser')
 
-    # with open('d:/!/k.html', mode='w', encoding='utf-8') as f:
-    #     f.write(soup.prettify(), )
+        self.title = soup.find('h1').text
 
-    fotorama = soup.find('div', class_='fotorama')
-    imgs = fotorama.find_all('img')
+        fotorama = soup.find('div', class_='fotorama')
+        imgs = fotorama.find_all('img')
 
-    # prepare the list of images to download. Original (not rescaled) images apparently stored in data-full attribute
-    dl = []
-    for i, img in enumerate(imgs, 1):
-        dl.append((_KAROPKA + img.get('data-full'), '{}/{:04d}.jpg'.format(dest, i)))
+        # prepare the list of images to download. Original (not rescaled) images apparently stored in data-full attribute
+        for i, img in enumerate(imgs, 1):
+            self.dl.append((_KAROPKA + img.get('data-full'), '{:04d}.jpg'.format(i)))
 
-    print('Found {} images'.format(len(dl)))
-    download_images(dl)
-    return dl
+        return len(self.dl)
