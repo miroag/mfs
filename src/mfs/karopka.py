@@ -11,14 +11,14 @@ class KaropkaModelScraper(BaseScraper):
     """
     Scrape karopka model overview. URL is in the form of http://karopka.ru/community/user/<user_id>/?MODEL=<model_id>
     """
-
-    def scan(self, url, follow=True):
+    def __init__(self, url, follow=True):
         if not url.startswith('http://karopka.ru/community/'):
             raise AttributeError('URL shall start from http://karopka.ru/community/')
+        super().__init__(url, follow)
 
-        self.dl = []
 
-        soup = util.soup(url)
+    def scan(self):
+        soup = util.soup(self.url)
 
         self.title = soup.find('h1').text
 
@@ -29,13 +29,17 @@ class KaropkaModelScraper(BaseScraper):
         for i, img in enumerate(imgs, 1):
             self.dl.append((_KAROPKA + img.get('data-full'), '{:04d}.jpg'.format(i)))
 
-        return len(self.dl)
+        return self
 
 
 class KaropkaForumScraper(BaseScraper):
     """
     Scrape karopka forum. URL is in the form of http://karopka.ru/forum/
     """
+    def __init__(self, url, follow=True):
+        if not url.startswith('http://karopka.ru/forum/'):
+            raise AttributeError('URL shall start from http://karopka.ru/forum/')
+        super().__init__(url, follow)
 
     def _scan_forum_page(self, soup, follow=True):
         # list of images to download
@@ -91,15 +95,10 @@ class KaropkaForumScraper(BaseScraper):
 
         return dl
 
-    def scan(self, url, follow=True):
-        if not url.startswith('http://karopka.ru/forum/'):
-            raise AttributeError('URL shall start from http://karopka.ru/forum/')
-
-        self.dl = []
-
-        soup = util.soup(url)
+    def scan(self):
+        soup = util.soup(self.url)
 
         self.title = soup.find('div', class_='forum-header-title').text.strip()
-        self.dl = self._scan_forum_page(soup=soup, follow=follow)
+        self.dl = self._scan_forum_page(soup=soup, follow=self.follow)
 
-        return len(self.dl)
+        return self

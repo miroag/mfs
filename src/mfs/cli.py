@@ -42,10 +42,10 @@ def main(argv=sys.argv):
     # karopka model overview ?
     # m = re.match('^http://karopka.ru/community/user/(.*)/\?MODEL=(.*)$', url)
     if url.startswith('http://karopka.ru/community/user/'):
-        scraper = KaropkaModelScraper()
+        scraper = KaropkaModelScraper(url, follow)
     elif url.startswith('http://karopka.ru/forum/'):
         # Scrape karopka forum. URL starts from http://karopka.ru/forum/
-        scraper = KaropkaForumScraper()
+        scraper = KaropkaForumScraper(url, follow)
     elif url.startswith('http://www.navsource.narod.ru'):
         scrape.navsource(url, dest)
     elif url.startswith('http://forums.airbase.ru'):
@@ -55,7 +55,7 @@ def main(argv=sys.argv):
         print('Unrecognized url ...')
         return -1
 
-    scraper.scan(url, follow)
+    scraper.scan()
     print('Found {} image candidates for {}'.format(len(scraper.dl), scraper.title))
     scraper.save(dest)
 
