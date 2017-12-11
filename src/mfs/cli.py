@@ -26,6 +26,7 @@ import sys
 from docopt import docopt
 
 from mfs.karopka import KaropkaModelScraper, KaropkaForumScraper
+from mfs.navsource import NavSourceScraper
 
 
 def main(argv=sys.argv):
@@ -47,7 +48,7 @@ def main(argv=sys.argv):
         # Scrape karopka forum. URL starts from http://karopka.ru/forum/
         scraper = KaropkaForumScraper(url, follow)
     elif url.startswith('http://www.navsource.narod.ru'):
-        scrape.navsource(url, dest)
+        scraper = NavSourceScraper(url, follow)
     elif url.startswith('http://forums.airbase.ru'):
         scrape.airbase_forum(url, dest, follow)
 
