@@ -1,72 +1,25 @@
-import bs4
-import requests
 import datetime
 
-# import dateutil.parser
-
-from mfs.base_scraper import *
-
+from mfs.base_scraper import BaseScraper
+import mfs.util as util
 
 
-
-
-
-def navsource(url, dest):
+class AirbaseForumScraper(BaseScraper):
     """
-    Scrape photos from http://www.navsource.narod.ru/ source
-    Args:
-        url:
-        dest:
-
-    Returns:
-
-    """
-    dl = []
-    urlparts = url.split('/')
-
-    r = requests.get(url=url)
-    r.raise_for_status()
-    soup = bs4.BeautifulSoup(r.text, 'html.parser')
-
-    for row in soup.find_all('tr'):
-        # while there are many tables numbering is going through tables - use it
-        tds = row.find_all('td')
-        if len(tds) < 4:
-            continue
-
-        i = int(tds[0].text.strip().replace('.', ''))
-
-        urlparts[-1] = tds[1].find('a').get('href')
-        src = '/'.join(urlparts)
-        des = _sluggify(tds[3].text.replace('(подробнее)', '').strip())
-
-        dl.append((src, '{}/navsource-{:04d} - {}.jpg'.format(dest, i, des)))
-
-    print('Found {} images'.format(len(dl)))
-    download_images(dl)
-    return dl
-
-
-def airbase_forum(url, dest, follow=True):
-    """
-    Scrape airbase.ru forum. URL starts from http://forums.airbase.ru
-    :param url:
-    :param dest:
-    :return:
+    Scrape karopka forum. URL is in the form of http://karopka.ru/forum/
     """
 
-    def _airbase_forum(url, dest, follow=True):
+    def __init__(self, url, follow=True):
+        if not url.startswith('http://forums.airbase.ru'):
+            raise AttributeError('URL shall start from http://forums.airbase.ru')
+        super().__init__(url, follow)
+
+    def _scan_forum_page(self, soup, follow=True):
         # list of images to download
         dl = []
 
-        r = requests.get(url=url)
-        r.raise_for_status()
-        # force encoding into utf-8 as sometimes airbase comes back in 'ISO-8859-1'
-        r.encoding = 'utf-8'
-        soup = bs4.BeautifulSoup(r.text, 'html.parser')
-
         posts = soup.find_all('div', class_='post')
-        print('Found {} posts on page {}'.format(len(posts), url))
+        print('Found {} posts on page {}'.format(len(posts), soup.title.text.strip()))
 
         # going through posts
         for post in posts:
@@ -89,10 +42,10 @@ def airbase_forum(url, dest, follow=True):
                 # print('Attachment #{}'.format(i))
                 # there are two links in each attachment - first gives the image second description
                 a = attachment.find('a')
-                src = _n(a.get('href'))
+                src = util.n(a.get('href'))
                 # description looks like rubbish for russian text - encoding issues ....
-                des = _sluggify(a.get('title'))
-                fn = '{}/{}-a{:02d}-{}'.format(dest, postnr, i, des)
+                des = util.sluggify(a.get('title'))
+                fn = '{}-a{:02d}-{}'.format(postnr, i, des)
                 dl.append((src, fn))
 
             # 2nd class are the images uploaded to image sharing sites, like vfl.ru
@@ -104,7 +57,7 @@ def airbase_forum(url, dest, follow=True):
                     if link.find('a'):
                         src = link.find('a').get('href')
                         if src:
-                            fn = '{}/{}-l{:02d}.jpg'.format(dest, postnr, i)
+                            fn = '{}-l{:02d}.jpg'.format(postnr, i)
                             dl.append((src, fn))
 
             # 3rd class are the images uploaded to image sharing sites, like vfl.ru
@@ -116,7 +69,7 @@ def airbase_forum(url, dest, follow=True):
                     if link.find('a'):
                         src = link.find('a').get('href')
                         if src:
-                            fn = '{}/{}-l{:02d}.jpg'.format(dest, postnr, i)
+                            fn = '{}-l{:02d}.jpg'.format(postnr, i)
                             dl.append((src, fn))
 
         print('Found {} potential image links'.format(len(dl)))
@@ -127,10 +80,14 @@ def airbase_forum(url, dest, follow=True):
             if next_page:
                 src = next_page.get('href')
                 if src:
-                    dl += _airbase_forum(_n(src), dest, follow)
+                    dl += self._scan_forum_page(util.soup(util.n(src)), follow)
 
         return dl
 
-    dl = _airbase_forum(url=url, dest=dest, follow=follow)
-    download_images(dl)
-    return dl
+    def scan(self):
+        soup = util.soup(self.url)
+
+        self.title = soup.find('h1').text.strip()
+        self.dl = self._scan_forum_page(soup=soup, follow=self.follow)
+
+        return self

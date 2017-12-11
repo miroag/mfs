@@ -27,6 +27,7 @@ from docopt import docopt
 
 from mfs.karopka import KaropkaModelScraper, KaropkaForumScraper
 from mfs.navsource import NavSourceScraper
+from mfs.airbase import AirbaseForumScraper
 
 
 def main(argv=sys.argv):
@@ -50,7 +51,7 @@ def main(argv=sys.argv):
     elif url.startswith('http://www.navsource.narod.ru'):
         scraper = NavSourceScraper(url, follow)
     elif url.startswith('http://forums.airbase.ru'):
-        scrape.airbase_forum(url, dest, follow)
+        scraper = AirbaseForumScraper(url, follow)
 
     if not scraper:
         print('Unrecognized url ...')

@@ -36,4 +36,6 @@ def soup(url):
 
     r = requests.get(url=url)
     r.raise_for_status()
+    # force encoding into utf-8 as sometimes airbase comes back in 'ISO-8859-1'
+    r.encoding = 'utf-8'
     return bs4.BeautifulSoup(r.text, 'html.parser')

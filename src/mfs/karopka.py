@@ -11,11 +11,11 @@ class KaropkaModelScraper(BaseScraper):
     """
     Scrape karopka model overview. URL is in the form of http://karopka.ru/community/user/<user_id>/?MODEL=<model_id>
     """
+
     def __init__(self, url, follow=True):
         if not url.startswith('http://karopka.ru/community/'):
             raise AttributeError('URL shall start from http://karopka.ru/community/')
         super().__init__(url, follow)
-
 
     def scan(self):
         soup = util.soup(self.url)
@@ -36,6 +36,7 @@ class KaropkaForumScraper(BaseScraper):
     """
     Scrape karopka forum. URL is in the form of http://karopka.ru/forum/
     """
+
     def __init__(self, url, follow=True):
         if not url.startswith('http://karopka.ru/forum/'):
             raise AttributeError('URL shall start from http://karopka.ru/forum/')
