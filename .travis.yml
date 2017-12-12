@@ -16,9 +16,6 @@ matrix:
     - python: '3.6'
       env:
         - TOXENV=py36,report,codecov
-    - python: 'pypy-5.4'
-      env:
-        - TOXENV=pypy,report,codecov
 before_install:
   - python --version
   - uname -a
@@ -38,3 +35,4 @@ notifications:
   email:
     on_success: never
     on_failure: always
+  slack: miroag:Ipfs0cKDiY7f5aHeQpGiJMtN
