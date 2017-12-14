@@ -5,7 +5,7 @@ from mfs.airbase import AirbaseForumScraper
 
 def test_model_wrong_url():
     with pytest.raises(AttributeError):
-        scraper = AirbaseForumScraper('very wrong url')
+        scraper = AirbaseForumScraper('very wrong url')  # noqa
 
 
 def test_live_airbase_1():
@@ -26,6 +26,7 @@ def test_live_airbase_2():
 
 def test_live_airbase_3():
     scraper = AirbaseForumScraper('http://forums.airbase.ru/2014/09/t67904--krejser-varyag-vremen-ryav.html',
-                                      follow=True).scan()
+                                  follow=True)\
+        .scan()
 
     assert len(scraper.dl) >= 253, 'Wrong number of links'

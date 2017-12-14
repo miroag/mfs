@@ -22,7 +22,7 @@ def sluggify(text):
     """
     if not text:
         return ''
-    data = ''.join([c for c in text if c.isalpha() or c.isdigit() or c in [' ', '.', ',' , '_', '-', '=']]).rstrip()
+    data = ''.join([c for c in text if c.isalpha() or c.isdigit() or c in [' ', '.', ',', '_', '-', '=']]).rstrip()
     truncated = data[:75] if len(data) > 75 else data
     return truncated
 

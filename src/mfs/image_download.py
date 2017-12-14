@@ -1,7 +1,8 @@
-import bs4
-import urllib.parse as urlp
-import aiohttp
 import asyncio
+import urllib.parse as urlp
+
+import aiohttp
+import bs4
 import tqdm
 
 import mfs.util as util

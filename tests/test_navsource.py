@@ -5,7 +5,7 @@ from mfs.navsource import NavSourceScraper
 
 def test_model_wrong_url():
     with pytest.raises(AttributeError):
-        scraper = NavSourceScraper('very wrong url')
+        scraper = NavSourceScraper('very wrong url')  # noqa
 
 
 def test_live_navsource():
@@ -13,4 +13,3 @@ def test_live_navsource():
 
     assert scraper.title == 'Бронепалубный крейсер "Варяг"'
     assert len(scraper.dl) == 56, 'Wrong number of files'
-

@@ -1,8 +1,5 @@
-import bs4
-import requests
-
-from mfs.base_scraper import BaseScraper
 import mfs.util as util
+from mfs.base_scraper import BaseScraper
 
 _KAROPKA = 'http://karopka.ru'
 

@@ -1,4 +1,5 @@
 import os
+
 import pytest
 
 
@@ -8,6 +9,7 @@ def testdata():
     Simple fixture to return reference data
     :return:
     """
+
     class TestData():
         def __init__(self):
             self.datadir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data')

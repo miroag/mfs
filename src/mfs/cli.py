@@ -25,9 +25,10 @@ import sys
 
 from docopt import docopt
 
-from mfs.karopka import KaropkaModelScraper, KaropkaForumScraper
-from mfs.navsource import NavSourceScraper
 from mfs.airbase import AirbaseForumScraper
+from mfs.karopka import KaropkaForumScraper
+from mfs.karopka import KaropkaModelScraper
+from mfs.navsource import NavSourceScraper
 
 
 def main(argv=sys.argv):

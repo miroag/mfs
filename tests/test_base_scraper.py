@@ -1,5 +1,7 @@
 import os
+
 import pytest
+
 from mfs.base_scraper import BaseScraper
 
 
@@ -34,4 +36,3 @@ def test_save(tmpdir):
     assert len(url_files) == 1, 'There shall be one url file'
 
     assert len(os.listdir(dest)) == nfiles + 1, 'Wrong number of files'
-

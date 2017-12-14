@@ -1,7 +1,7 @@
 import datetime
 
-from mfs.base_scraper import BaseScraper
 import mfs.util as util
+from mfs.base_scraper import BaseScraper
 
 
 class AirbaseForumScraper(BaseScraper):

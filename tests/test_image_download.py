@@ -1,5 +1,5 @@
-import os
 import filecmp
+import os
 
 import mfs.image_download as base
 
@@ -88,4 +88,5 @@ def test_keep4u(tmpdir, testdata):
     fn = tmpdir.strpath + '/aaa.jpg'
     base.download_images([('http://keep4u.ru/full/486422e15f82de157a64237a9627892e.html', fn)])
     assert len(os.listdir(tmpdir.strpath)) == 1, 'One images shall be downloaded'
-    assert filecmp.cmp(testdata.fn('keep4u.ru.jpg'), fn, shallow=False), 'Downloaded image does not match the reference one'
+    assert filecmp.cmp(testdata.fn('keep4u.ru.jpg'), fn,
+                       shallow=False), 'Downloaded image does not match the reference one'

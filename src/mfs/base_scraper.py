@@ -3,6 +3,7 @@ import os
 import mfs.util as util
 from mfs.image_download import download_images
 
+
 class BaseScraper:
     """
     Base scraper implements methods to resolve image links, as well as means to download resources.
@@ -36,8 +37,7 @@ class BaseScraper:
 
         # make url file
         if write_url_file:
-            with open(os.path.join(dest, util.sluggify(self.title)+'.url'), 'w') as f:
+            with open(os.path.join(dest, util.sluggify(self.title) + '.url'), 'w') as f:
                 f.write('[InternetShortcut]\nURL={}'.format(self.url))
 
         return dest
-
