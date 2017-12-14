@@ -16,6 +16,8 @@ include CONTRIBUTING.rst
 include LICENSE
 include README.rst
 
-include tox.ini .travis.yml appveyor.yml
+include tox.ini
+include .travis.yml
+include sonar-project.properties
 
 global-exclude *.py[cod] __pycache__ *.so *.dylib

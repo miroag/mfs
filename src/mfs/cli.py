@@ -25,7 +25,10 @@ import sys
 
 from docopt import docopt
 
-import mfs.scrape as scrape
+from mfs.airbase import AirbaseForumScraper
+from mfs.karopka import KaropkaForumScraper
+from mfs.karopka import KaropkaModelScraper
+from mfs.navsource import NavSourceScraper
 
 
 def main(argv=sys.argv):
@@ -38,19 +41,26 @@ def main(argv=sys.argv):
     follow = not args['--no-follow']
     print('Processing {}'.format(url))
 
+    scraper = None
     # karopka model overview ?
     # m = re.match('^http://karopka.ru/community/user/(.*)/\?MODEL=(.*)$', url)
     if url.startswith('http://karopka.ru/community/user/'):
-        scrape.karopka_model_overview(url, dest)
+        scraper = KaropkaModelScraper(url, follow)
     elif url.startswith('http://karopka.ru/forum/'):
         # Scrape karopka forum. URL starts from http://karopka.ru/forum/
-        scrape.karopka_forum(url, dest, follow)
+        scraper = KaropkaForumScraper(url, follow)
     elif url.startswith('http://www.navsource.narod.ru'):
-        scrape.navsource(url, dest)
+        scraper = NavSourceScraper(url, follow)
     elif url.startswith('http://forums.airbase.ru'):
-        scrape.airbase_forum(url, dest, follow)
-    else:
+        scraper = AirbaseForumScraper(url, follow)
+
+    if not scraper:
         print('Unrecognized url ...')
+        return -1
+
+    scraper.scan()
+    print('Found {} image candidates for {}'.format(len(scraper.dl), scraper.title))
+    scraper.save(dest)
 
     print('Done')
 
