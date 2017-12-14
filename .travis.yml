@@ -16,9 +16,12 @@ matrix:
     - python: '3.6'
       env:
         - TOXENV=py36,report,codecov
+#    - python: '3.6'
+#      env:
+#        - TOXENV=check
     - python: '3.6'
       env:
-        - TOXENV=check, docs
+        - TOXENV=docs
 
 before_install:
   - python --version
