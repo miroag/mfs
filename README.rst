@@ -10,8 +10,7 @@ Overview
     * - docs
       - |docs|
     * - tests
-      - | |travis| |appveyor| |requires|
-        | |codecov|
+      - | |travis| |requires| |codecov|
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
         | |commits-since|
@@ -23,10 +22,6 @@ Overview
 .. |travis| image:: https://travis-ci.org/miroag/mfs.svg?branch=master
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/miroag/mfs
-
-.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/github/miroag/mfs?branch=master&svg=true
-    :alt: AppVeyor Build Status
-    :target: https://ci.appveyor.com/project/miroag/mfs
 
 .. |requires| image:: https://requires.io/github/miroag/mfs/requirements.svg?branch=master
     :alt: Requirements Status
