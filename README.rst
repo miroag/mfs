@@ -10,7 +10,7 @@ Overview
     * - docs
       - |docs|
     * - tests
-      - | |travis| |requires| |codecov|
+      - | |travis| |requires| |codecov| |coveralls|
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
         | |commits-since|
@@ -28,8 +28,12 @@ Overview
     :target: https://requires.io/github/miroag/mfs/requirements/?branch=master
 
 .. |codecov| image:: https://codecov.io/github/miroag/mfs/coverage.svg?branch=master
-    :alt: Coverage Status
+    :alt: Codecov Coverage Status
     :target: https://codecov.io/github/miroag/mfs
+
+.. |coveralls| image:: https://coveralls.io/repos/github/miroag/mfs/badge.svg?branch=master
+    :alt: Coveralls Coverage Status
+    :target: https://coveralls.io/github/miroag/mfs?branch=master
 
 .. |version| image:: https://img.shields.io/pypi/v/mfs.svg
     :alt: PyPI Package latest release
