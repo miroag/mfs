@@ -3,7 +3,7 @@ import os
 import pytest
 
 
-@pytest.fixture
+@pytest.fixture(scope='session')
 def testdata():
     """
     Simple fixture to return reference data
