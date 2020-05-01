@@ -64,6 +64,12 @@ def test_live_vfl(tmpdir, testdata):
                        shallow=False), 'Downloaded image does not match the reference one'
 
 
+def test_live_vfl_2020(tmpdir, testdata):
+    fn = tmpdir.strpath + '/aaa.jpg'
+    base.download_images([('http://vfl.ru/fotos/9b930dc417050203.html', fn)])
+    assert len(os.listdir(tmpdir.strpath)) == 1, 'One images shall be downloaded'
+
+
 def test_reference_radikal(testdata):
     url = base._resolve_radikal(testdata.textdata('radikal.ru.html'))
     assert url == 'http://s39.radikal.ru/i084/1106/a9/e1fca250702b.jpg', \

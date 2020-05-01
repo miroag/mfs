@@ -11,7 +11,8 @@ import mfs.util as util
 def download_images(dl):
     # avoid to many requests(coroutines) the same time.
     # limit them by setting semaphores (simultaneous requests)
-    _sema = asyncio.Semaphore(10)
+    # setting to 5 as higher number will yield 503 from vfl.ru
+    _sema = asyncio.Semaphore(5)
 
     async def wait_with_progressbar(coros):
         for f in tqdm.tqdm(asyncio.as_completed(coros), total=len(coros)):

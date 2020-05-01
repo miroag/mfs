@@ -39,6 +39,11 @@ def main(argv=sys.argv):
         raise ValueError("{} is not a directory".format(dest))
     url = args['URL']
     follow = not args['--no-follow']
+
+    # browsers return https while the sites are still insecure, so to ease copy/paste
+    # this is a dirty hack and proper url handling is required .. but bit lazy now
+    url = url.replace('https://', 'http://')
+
     print('Processing {}'.format(url))
 
     scraper = None
